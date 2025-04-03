@@ -1,5 +1,10 @@
-.projects-container {
-}
+/* mobile 320px - 375px
+Tablet
+@media only screen and (min-width: 768px)
+
+Desktop
+@media only screen and (min-width: 1440px) */
+
 .projects-header {
   margin-bottom: 32px;
   text-align: left;
@@ -10,16 +15,23 @@
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
 }
-.projects-wrapper {
+.swiper {
   border-radius: 24px;
   box-sizing: border-box;
   width: 100%;
   background-color: #1c1d20;
 }
-.div-1 {
+/* maybe should add fixed height to .swiper on desktop*/
+
+.project-descr-div {
   background-color: #fafafa;
-  padding: 32px 32px 0 32px;
+  padding: 32px;
   border-radius: 24px 24px 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .project-descr-div {
+    padding: 64px;
+  }
 }
 .prj-techs-list {
   display: flex;
@@ -27,25 +39,54 @@
   flex-wrap: wrap;
 }
 .prj-techs-item {
-  border: solid 1px #1c1d20;
+  border: solid 1px rgba(28, 29, 32, 0.2);
   border-radius: 60px;
   padding: 13px 18px 13px 18px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1c1d20;
+}
+@media only screen and (min-width: 768px) {
+  .prj-techs-item {
+    padding: 18px;
+  }
 }
 .projects-descr {
   margin-top: 96px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: -0.03em;
   color: #1c1d20;
 }
+@media only screen and (min-width: 768px) {
+  .projects-descr {
+    margin-top: 164px;
+    font-size: 44px;
+    line-height: 1;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .projects-descr {
+    margin-top: 223px;
+  }
+}
+
 .see-project-btn {
   margin-top: 32px;
-  margin-bottom: 32px;
-  padding: 13px 32px 13px 32px;
+  padding: 13px 32px;
   background-color: #ed3b44;
   border-style: none;
   border-radius: 60px;
+  width: 141px;
+  height: 45px;
+}
+@media only screen and (min-width: 768px) {
+  .see-project-btn {
+    padding: 18px 50px;
+    width: 177px;
+    height: 55px;
+  }
 }
 .prj-btn-link {
   font-weight: 500;
@@ -53,7 +94,7 @@
   letter-spacing: -0.02em;
   color: #fafafa;
 }
-.projects-img-container {
+.projects-img-div {
   background: #242527;
   border-radius: 0 0 24px 24px;
   width: 100%;
