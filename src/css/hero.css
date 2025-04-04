@@ -1,0 +1,119 @@
+.hero {
+  min-width: 375px;
+  padding: 32px 0;
+  background: url(../images/mobile/hero/bg-hero-mobile@1x.png)  no-repeat;
+}
+@media (min-resolution: 2dppx){
+  .hero{
+    background: url(../images/mobile/hero/bg-hero-mobile@2x.png) no-repeat;
+  }
+}
+.hero-title {
+  width: 343px;
+  margin-top: 249px;  /*потім змінити і перенести до хедера */
+  align-items: center;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  margin-left: 16px;
+  margin-bottom: 212px;
+}
+.social-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-left: 16px;
+}
+.social-items {
+  color: #FAFAFA;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.20);
+  white-space: nowrap;
+  transition: border-color 0.3s ease;
+}
+
+.social-items:hover,
+.social-items:focus-within {
+  border-color: #FAFAFA;
+  outline: none;
+}
+.social-items a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  outline: none;
+}
+.style {
+  display: flex;
+  padding: 8px 8px;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.20);
+}
+
+/* Style tablet */
+@media only screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    padding: 32px 0;
+    background: url(../images/tablet/hero/bg-hero-tablet@1x.png) no-repeat;
+  }
+  @media (min-resolution: 2dppx){
+    .hero{
+      background: url(../images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
+    }
+  }
+  .hero-title {
+    width: 632px;
+    font-size: 90px;
+    letter-spacing: -2.7px;
+    margin-left: 32px;
+    margin-bottom: 187px;
+  }
+  .social-links {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .some {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end; /* Вирівнює всі елементи вправо */
+    }
+}
+
+/* Desktop (1440px) */
+@media only screen and (min-width: 1440px) {
+  .hero {
+    max-width: 1440px;
+    background: url(../images/desktop/hero/bg-hero-desktop@1x.png) no-repeat;
+  }
+  @media (min-resolution: 2dppx){
+    .hero{
+      background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
+    }
+  }
+  .hero-title {
+    width: 1084px;
+    margin-left: 178px;
+    margin-bottom: 243px;
+  }
+}
+
+
+
