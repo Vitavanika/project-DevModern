@@ -27,6 +27,7 @@ Desktop
   .projects-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 }
 .project-descr-div {
@@ -41,7 +42,7 @@ Desktop
 }
 @media only screen and (min-width: 1440px) {
   .project-descr-div {
-    flex-grow: 1;
+    flex: 1;
     border-radius: 24px 0 0 24px;
   }
 }
@@ -120,8 +121,8 @@ Desktop
 }
 @media only screen and (min-width: 1440px) {
   .project-img-div {
-    flex-grow: 1;
-    width: auto;
+    flex: 1;
+    /* width: auto; */
     border-radius: 0 24px 24px 0;
   }
 }
