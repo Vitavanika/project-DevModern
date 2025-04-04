@@ -1,0 +1,36 @@
+.covers-container {
+  padding: 0;
+}
+
+.covers {
+  overflow: hidden;
+}
+
+.away:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.track {
+  overflow: hidden;
+  display: none;
+}
+
+.away {
+  display: flex;
+  object-fit: none;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.carousel-picture img {
+  width: 283px;
+  height: 163px;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-picture img {
+    width: 544px;
+    height: 314px;
+  }
+}
