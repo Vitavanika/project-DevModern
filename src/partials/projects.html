@@ -3,6 +3,7 @@
     <h2 class="projects-header">Projects</h2>
     <div class="swiper">
       <ul class="swiper-wrapper">
+        <!-- slide-1 -->
         <li class="swiper-slide">
           <div class="projects-wrapper">
             <div class="project-descr-div">
@@ -28,47 +29,37 @@
               </button>
             </div>
             <div class="projects-img-div">
-              <img
-                class="prj-pic"
-                src=""
-                alt="Picture of mobile App project."
-              />
+              <picture class="prj-pic">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/mobile/projects/expand-mobile@1x.webp 1x,
+                    ../images/mobile/projects/expand-mobile@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  srcset="
+                    ../images/tablet/projects/expand-tablet@1x.webp 1x,
+                    ../images/tablet/projects/expand-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ../images/desktop/projects/expand-desktop@1x.webp 1x,
+                    ../images/desktop/projects/expand-desktop@2x.webp 2x
+                  "
+                />
+                <img
+                  src="../images/mobile/projects/expand-mobile@1x.webp"
+                  alt="Picture of a mobile reading App project."
+                />
+              </picture>
             </div>
           </div>
         </li>
-        <!-- <li class="swiper-slide">
-          <div class="projects-wrapper">
-            <div class="project-descr-div">
-              <ul class="prj-techs-list">
-                <li class="prj-techs-item">#react</li>
-                <li class="prj-techs-item">#js</li>
-                <li class="prj-techs-item">#node js</li>
-                <li class="prj-techs-item">#git</li>
-              </ul>
-              <p class="projects-descr">
-                Programming Across<br />
-                Borders: Ideas,<br />
-                Technologies, Innovations
-              </p>
-              <button type="button" class="button see-project-btn">
-                <a
-                  class="prj-btn-link"
-                  href="https://github.com/Vitavanika/project-DevModern"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >See project</a
-                >
-              </button>
-            </div>
-            <div class="projects-img-div">
-              <img
-                class="prj-pic"
-                src=""
-                alt="Picture of mobile App project."
-              />
-            </div>
-          </div>
-        </li>
+        <!-- slide-2 -->
         <li class="swiper-slide">
           <div class="projects-wrapper">
             <div class="project-descr-div">
@@ -94,14 +85,92 @@
               </button>
             </div>
             <div class="projects-img-div">
-              <img
-                class="prj-pic"
-                src=""
-                alt="Picture of mobile App project."
-              />
+              <picture class="prj-pic">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/mobile/projects/petlove-mobile@1x.webp 1x,
+                    ../images/mobile/projects/petlove-mobile@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  srcset="
+                    ../images/tablet/projects/petlove-tablet@1x.webp 1x,
+                    ../images/tablet/projects/petlove-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ../images/desktop/projects/petlove-desktop@1x.webp 1x,
+                    ../images/desktop/projects/petlove-desktop@2x.webp 2x
+                  "
+                />
+                <img
+                  src="../images/mobile/projects/petlove-mobile@1x.webp"
+                  alt="Petlove vet clinic website."
+                />
+              </picture>
             </div>
           </div>
-        </li> -->
+        </li>
+        <!-- slide-3 -->
+        <li class="swiper-slide">
+          <div class="projects-wrapper">
+            <div class="project-descr-div">
+              <ul class="prj-techs-list">
+                <li class="prj-techs-item">#react</li>
+                <li class="prj-techs-item">#js</li>
+                <li class="prj-techs-item">#node js</li>
+                <li class="prj-techs-item">#git</li>
+              </ul>
+              <p class="projects-descr">
+                Programming Across<br />
+                Borders: Ideas,<br />
+                Technologies, Innovations
+              </p>
+              <button type="button" class="button see-project-btn">
+                <a
+                  class="prj-btn-link"
+                  href="https://github.com/Vitavanika/project-DevModern"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >See project</a
+                >
+              </button>
+            </div>
+            <div class="projects-img-div">
+              <picture class="prj-pic">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ../images/mobile/projects/vocab-mobile@1x.webp 1x,
+                    ../images/mobile/projects/vocab-mobile@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1279px)"
+                  srcset="
+                    ../images/tablet/projects/vocab-tablet@1x.webp 1x,
+                    ../images/tablet/projects/vocab-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ../images/desktop/projects/vocab-desktop@1x.webp 1x,
+                    ../images/desktop/projects/vocab-desktop@2x.webp 2x
+                  "
+                />
+                <img
+                  src="../images/mobile/projects/vocab-mobile@1x.webp"
+                  alt="Vacabulary service website sign-up page screenshot."
+                />
+              </picture>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="slider-btns-wrapper">
