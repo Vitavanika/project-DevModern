@@ -3,7 +3,12 @@
 }
 
 .covers {
+  height: 508px;
   overflow: hidden;
+  background-image: url('../images/mobile/covers/bg-mobile@1x.png'),
+    url('../images/mobile/covers/bg-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: left 80px top 150px, right 20px bottom 115px;
 }
 
 .away:not(:last-child) {
