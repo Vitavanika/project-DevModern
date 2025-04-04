@@ -1,44 +1,58 @@
 
-<footer class="container">
-    <div>
-        <div class="branding__logo">
-            <img class="branding__logo-img" srcset="../images/mobile/work/glass-effect-work@1x.png" src="../images/mobile/work/" alt="my photo" width="44" height="44" />
-            <h2 class="branding__title">
-                <span class="branding__title--white">LET'S</span>
-                <span class="branding__title--red">WORK</span>
-                <span class="branding__title--white">TOGETHER</span>
+<footer class="work" id="work_together">
+    <div class="container">
+        <div class="work__logo">
+            <picture>
+                <source srcset="
+            ../images/tablet/works/jefferson-face-tablet@1x.webp 1x,
+            ../images/tablet/works/jefferson-face-tablet@2x.webp 2x
+          " media="(min-width: 768px)" />
+                <source srcset="
+            ../images/mobile/works/jefferson-face-mobile@1x.webp 1x,
+            ../images/mobile/works/jefferson-face-mobile@2x.webp 2x
+          " media="(max-width: 767px)" />
+                <img class="work__logo-img" src="../images/tablet/works/jefferson-face-tablet@1x.webp"
+                    alt="Lloyd Jefferson" width="44" height="44" />
+            </picture>
+
+            <h2 class="work__title">
+                Let’s <span class="work__title--red">work</span><br />
+                <span class="work__title--white">together</span>
             </h2>
         </div>
-        <form class="contact__form" id="work-form">
-            <fieldset class="contact__form-fieldset">
-                <input class="contact__form-email" name="email" type="email" placeholder="clients@gmail.com"
-                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required
-                    title="Enter the correct email address (eg example@domain.com)" />
-                <textarea class="contact__form-comment" name="comment" id="work-form-comment" placeholder="comments"
-                    rows="1" required></textarea>
-            </fieldset>
-            <button class="contact__form-send" id="button-send" type="submit">
-                Send
-            </button>
+
+        <form class="work__form" name="form-contact">
+            <input type="email" name="email" id="user-email" placeholder="clients@gmail.com" required
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="work__input email" />
+            <input type="text" name="comments" id="user-comments" placeholder="comments" required
+                class="work__input text" />
+            <button class="work__button" type="submit">Send</button>
         </form>
-        <nav class="contact__nav">
-            <a href="mailto:lloydjefferson@gmail.com" class="contact__email links">lloydjefferson@gmail.com</a>
-            <a class="contact__tel links" href="tel:+380111111111">+380 11 1111 11 11</a>
+
+        <nav class="work__nav">
+            <ul class="work__contact-list">
+                <li class="work__contact-item">
+                    <a class="work__contact-link" href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+                </li>
+                <li class="work__contact-item">
+                    <a class="work__contact-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+                </li>
+            </ul>
         </nav>
     </div>
-    <div class="modal__overlay visually-hidden" id="work-overlay">
-        <div class="modal__content">
-            <button class="modal__close-button" id="modal-close-btn" aria-label="Close modal">
-                <span class="modal__close-button-line first rotate" data-line="first"></span>
-                <span class="modal__close-button-line second rotate" data-line="second"></span>
-            </button>
-            <h3 class="modal__title">
-                Thank you for your interest in cooperation!
-            </h3>
-            <p class="modal__text">
-                The manager will contact you shortly to discuss further details and
-                opportunities for cooperation. Please stay in touch.
-            </p>
-        </div>
-    </div>
 </footer>
+
+<div class="backdrop is-open">
+    <div class="modal">
+        <button class="modal__close" aria-label="Close modal">
+            <svg class="modal__icon" width="24" height="24">
+                <use href="../images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal__title">Thank you for your interest in cooperation!</h2>
+        <p class="modal__text">
+            The manager will contact you shortly to discuss further details and
+            opportunities for cooperation. Please stay in touch.
+        </p>
+    </div>
+</div>

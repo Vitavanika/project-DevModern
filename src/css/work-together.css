@@ -1,109 +1,203 @@
-/* Загальні стилі */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Контейнер */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Логотип */
-.branding__logo {
+/* === Base styles === */
+.work__logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 64px;
 }
 
-.branding__logo-img {
-    width: 50px;
-    height: auto;
+.work__logo-img {
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 
-.branding__title {
-    font-size: 24px;
-    font-weight: bold;
+.work__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
 }
 
-.branding__title--white {
-    color: white;
+.work__title--red {
+    color: #ed3b44;
 }
 
-.branding__title--red {
-    color: red;
+.work__title--white {
+    display: inline-block;
+    margin-left: -52px;
 }
 
-/* Форма */
-.contact__form {
-    margin-top: 20px;
+.work__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
-.contact__form-fieldset {
-    border: none;
-    padding: 0;
-}
-
-.contact__form-email,
-.contact__form-comment {
+.work__input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact__form-send {
-    background-color: red;
-    color: white;
     border: none;
-    padding: 10px 20px;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    font-size: 16px;
+    color: rgba(250, 250, 250, 0.6);
+    padding-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.work__input:focus {
+    border-color: #fafafa;
+}
+
+.work__button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fafafa;
+    background-color: #ed3b44;
+    border: none;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Контакти */
-.contact__nav {
-    margin-top: 20px;
+.work__button:hover {
+    background-color: #e0373f;
 }
 
-.contact__email,
-.contact__tel {
-    display: block;
-    margin-bottom: 10px;
-    color: blue;
+.work__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.work__contact-item {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.work__contact-link {
+    font-size: 14px;
+    color: #fafafa;
     text-decoration: none;
 }
 
-/* Модальне вікно */
-.modal__overlay {
-    display: none;
+/* === Modal === */
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(15, 15, 16, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal__content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 343px;
+    background-color: #1c1d20;
+    border-radius: 20px;
+    padding: 64px 32px;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.modal__close-button {
-    background: none;
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 20px;
 }
 
-/* Прихований клас */
-.visually-hidden {
-    display: none;
+.modal__icon {
+    stroke: #fafafa;
+}
+
+.modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.modal__text {
+    font-size: 16px;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+/* === Media === */
+@media (min-width: 768px) {
+    .work__logo-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 24px;
+    }
+
+    .work__title {
+        font-size: 64px;
+    }
+
+    .work__title--white {
+        margin-left: -90px;
+    }
+
+    .work__form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .work__input {
+        width: 245px;
+        margin-right: 32px;
+    }
+
+    .work__button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .work__contact-list {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .modal {
+        width: 492px;
+        padding: 64px;
+    }
+
+    .modal__title,
+    .modal__text {
+        width: 364px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .work__input {
+        width: 390px;
+    }
 }
