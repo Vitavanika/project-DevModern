@@ -1,5 +1,5 @@
 :root {
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background: #1c1d20;
@@ -15,17 +15,12 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  overflow: hidden;
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin: 64px auto;
 }
