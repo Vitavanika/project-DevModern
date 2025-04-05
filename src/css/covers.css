@@ -12,19 +12,20 @@
 }
 
 .away:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .track {
-  overflow: hidden;
-  display: none;
+  /* overflow: hidden; */
+  /* display: none; */
+  transform: rotate(16deg) translateY(-220px);
 }
 
 .away {
   display: flex;
   object-fit: none;
-  overflow: hidden;
-  gap: 20px;
+  /* overflow: hidden; */
+  gap: 24px;
 }
 
 .carousel-picture img {
@@ -33,9 +34,60 @@
   max-width: none;
 }
 
-@media (min-width: 768px) {
+.carousel-picture:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  .away {
+    gap: 40px;
+  }
+
+  .away:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
   .carousel-picture img {
     width: 544px;
     height: 314px;
   }
+
+  .covers {
+    height: 960px;
+    background-position: right 250px bottom 600px, left 400px top 400px;
+  }
+
+  .track {
+    transform: rotate(16deg) translateY(-400px);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .covers {
+    background-image: url('../images/mobile/covers/bg-mobile@1x.png'),
+      url('../images/mobile/covers/bg-mobile@1x.png'),
+      url('../images/mobile/covers/bg-mobile@1x.png');
+    background-repeat: no-repeat;
+
+    background-position: left 180px bottom 500px, right 950px bottom 220px,
+      left 900px top 450px;
+  }
+
+  .track {
+    transform: rotate(16deg) translateY(-380px);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
 }
