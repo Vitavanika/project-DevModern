@@ -9,6 +9,7 @@
     background: url(./images/mobile/hero/bg-hero-mobile@2x.png) no-repeat;
   }
 }
+
 .hero-title {
   width: 343px;
   margin-top: 249px;  /*потім змінити і перенести до хедера */
@@ -77,6 +78,7 @@
       background: url(./images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
     }
   }
+ 
   .hero-title {
     width: 632px;
     font-size: 90px;
@@ -104,7 +106,7 @@
   @media (min-resolution: 2dppx){
     .hero{
       background: url(./images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
-    }
+  }
   }
   .hero-title {
     width: 1084px;
