@@ -1,4 +1,5 @@
 .hero {
+  /* position: absolute; */
   min-width: 375px;
   padding: 32px 0;
   background: url(../images/mobile/hero/bg-hero-mobile@1x.png)  no-repeat;
