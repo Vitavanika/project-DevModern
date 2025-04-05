@@ -180,3 +180,23 @@
 }
 
 /* #endregion */
+/* #region Accordion */
+.faq-text {
+  display: none;
+  transition: all 0.6s ease;
+}
+
+.faq-list-item.active .faq-text {
+  display: block;
+}
+
+.faq-button svg {
+  transform: rotate(0);
+  transition: transform 0.6s ease;
+}
+
+.faq-list-item.active .faq-button svg {
+  transform: rotate(180deg);
+}
+
+/* #endregion */
