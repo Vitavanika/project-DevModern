@@ -11,6 +11,15 @@
   background-position: left 80px top 150px, right 20px bottom 115px;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .covers {
+    background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
+      url('../images/mobile/covers/bg-mobile@2x.png');
+  }
+}
+
 .away:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -72,6 +81,15 @@
 
     background-position: left 180px bottom 500px, right 950px bottom 220px,
       left 900px top 450px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .covers {
+      background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
+        url('../images/mobile/covers/bg-mobile@2x.png');
+    }
   }
 
   .track {
