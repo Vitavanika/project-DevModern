@@ -1,17 +1,25 @@
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import 'swiper/css';
-// import { Navigation } from 'swiper/modules';
-// import 'swiper/css/navigation';
+import Swiper from 'swiper';
+import 'swiper/css';
 
-// const swiperOptions = {
-//   direction: 'horizontal',
-//   navigation: {
-//     nextEl: '.swiper-btn-next',
-//     prevEl: '.swiper-btn-prev',
-//   },
-// };
+const nextBtnEl = document.querySelector(".swiper-btn-next");
+const prevBtnEl = document.querySelector(".swiper-btn-prev");
 
-// const swiper = new Swiper('.swiper', swiperOptions, {
-//   module: Navigation,
-// });
+const swiperOptions = {
+    slidesPerView: 1,
+    speed: 1000,
+    spaceBetween: 20,
+    allowTouchMove: true,
+    grabCursor: true,
+};
+
+const swiper = new Swiper('.swiper', swiperOptions);
+
+const slideFoward = (event) => {
+    swiper.slideNext()
+};
+const slideBack = (event) => {
+    swiper.slidePrev();
+};
+
+nextBtnEl.addEventListener("click", slideFoward);
+prevBtnEl.addEventListener("click", slideBack);
