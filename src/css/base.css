@@ -15,4 +15,12 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin: 64px auto;
 }
