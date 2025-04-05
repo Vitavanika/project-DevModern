@@ -33,7 +33,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.667 16H5.334M13.333 24l-8-8 8-8"/>
     </symbol>
     <symbol id="icon-arrow-right" viewBox="0 0 32 32">
-      <path fill="none" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.333 16h21.333M18.667 8l8 8-8 8" style="stroke:var(--color1, #fafafa)"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.333 16h21.333M18.667 8l8 8-8 8"/>
     </symbol>
   </defs>
 </svg>
