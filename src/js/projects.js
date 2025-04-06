@@ -1,43 +1,56 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+import { Keyboard } from 'swiper/modules';
 
-const nextBtnEl = document.querySelector(".swiper-btn-next");
-const prevBtnEl = document.querySelector(".swiper-btn-prev");
-const slideEl = document.querySelector(".swiper-slide")
-const lastSlideEl = document.querySelector(".swiper-slide:last-child");
-prevBtnEl.disabled = true;
-nextBtnEl.disabled = false;
+
+const nextPrjBtnEl = document.querySelector(".prjts-next-btn-js");
+const prevPRJBtnEl = document.querySelector(".prjts-back-btn-js");
+const projectsListEl = document.querySelector(".projects-list");
+prevPRJBtnEl.disabled = true;
+nextPrjBtnEl.disabled = false;
 
 const swiperOptions = {
+    modules: [Keyboard],
     slidesPerView: 1,
     speed: 1000,
     spaceBetween: 20,
     allowTouchMove: true,
     grabCursor: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: false,
+    },
 };
 
-const swiper = new Swiper('.swiper', swiperOptions);
+const projectsSwiperEl = new Swiper('.projects-swiper', swiperOptions);
+
 const slideFoward = (event) => {
     event.preventDefault(); 
-    swiper.slideNext()
-    prevBtnEl.disabled = false;
-    if (swiper.isEnd) {
-        nextBtnEl.disabled = true;
+    projectsSwiperEl.slideNext();
+    prevPRJBtnEl.disabled = false;
+    if (projectsSwiperEl.isEnd) {
+        nextPrjBtnEl.disabled = true;
     }
 };
 
 const slideBack = (event) => {
     event.preventDefault();
-    swiper.slidePrev();
-    nextBtnEl.disabled = false;
+    projectsSwiperEl.slidePrev();
+    nextPrjBtnEl.disabled = false;
 
-    if (swiper.isBeginning) {
-        prevBtnEl.disabled = true;
+    if (projectsSwiperEl.isBeginning) {
+        prevPRJBtnEl.disabled = true;
     }
 };
-
-nextBtnEl.addEventListener("click", slideFoward);
-prevBtnEl.addEventListener("click", slideBack);
-nextBtnEl.addEventListener("touchstart", slideFoward);
-prevBtnEl.addEventListener("touchstart", slideBack);
+// const keyboardNav = (event) => {
+//     if (event.code === "ArrowLeft") {
+//         slideBack();
+//     } else if (event.code === "ArrowRight") {
+//         slideFoward();
+//     }
+// };
+// projectsListEl.addEventListener("keydown", keyboardNav);
+nextPrjBtnEl.addEventListener("click", slideFoward);
+prevPRJBtnEl.addEventListener("click", slideBack);
 
