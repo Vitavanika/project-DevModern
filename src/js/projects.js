@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Keyboard } from 'swiper/modules';
-
+import 'swiper/css/keyboard';
 
 const nextPrjBtnEl = document.querySelector(".prjts-next-btn-js");
 const prevPRJBtnEl = document.querySelector(".prjts-back-btn-js");
-const projectsListEl = document.querySelector(".projects-list");
+
 prevPRJBtnEl.disabled = true;
 nextPrjBtnEl.disabled = false;
 
@@ -23,34 +23,26 @@ const swiperOptions = {
     },
 };
 
-const projectsSwiperEl = new Swiper('.projects-swiper', swiperOptions);
+const projectsSwiper = new Swiper('.projects-swiper', swiperOptions);
 
-const slideFoward = (event) => {
-    event.preventDefault(); 
-    projectsSwiperEl.slideNext();
+const updatePrjSwiperBtns	 = (event) => {
+   if (projectsSwiper.isBeginning) {
+    prevPRJBtnEl.disabled = true;
+    nextPrjBtnEl.disabled = false; 
+} else if (projectsSwiper.isEnd) {
     prevPRJBtnEl.disabled = false;
-    if (projectsSwiperEl.isEnd) {
-        nextPrjBtnEl.disabled = true;
-    }
-};
+    nextPrjBtnEl.disabled = true;
+} else{
+    prevPRJBtnEl.disabled = false;
+    nextPrjBtnEl.disabled = false;}
+}
+projectsSwiper.on("slideChange", updatePrjSwiperBtns	);
 
-const slideBack = (event) => {
-    event.preventDefault();
-    projectsSwiperEl.slidePrev();
-    nextPrjBtnEl.disabled = false;
 
-    if (projectsSwiperEl.isBeginning) {
-        prevPRJBtnEl.disabled = true;
-    }
-};
-// const keyboardNav = (event) => {
-//     if (event.code === "ArrowLeft") {
-//         slideBack();
-//     } else if (event.code === "ArrowRight") {
-//         slideFoward();
-//     }
-// };
-// projectsListEl.addEventListener("keydown", keyboardNav);
-nextPrjBtnEl.addEventListener("click", slideFoward);
-prevPRJBtnEl.addEventListener("click", slideBack);
+nextPrjBtnEl.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    projectsSwiper.slideNext();
+});
+prevPRJBtnEl.addEventListener("click", (event) => { event.preventDefault();
+    projectsSwiper.slidePrev();});
 
