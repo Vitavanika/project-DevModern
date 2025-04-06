@@ -2,9 +2,18 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
+
 const reviwersList = document.querySelector('.reviews-list');
 const leftReviewBtn = document.querySelector('.left-rev-btn');
 const rightReviewsBtn = document.querySelector('.right-rev-btn');
+
+const reviewsSection = document.querySelector('.reviews-section');
+const errorWrapper = document.getElementById('reviews-error-wrapper');
+const retryBtn = document.querySelector('.retry-reviews-btn');
+const reviewsContainer = document.querySelector('.reviews-container');
+
+// backend request
+let reviewsLoadError = false;
 
 async function fetchReviews() {
   try {
@@ -15,10 +24,14 @@ async function fetchReviews() {
       throw new Error('Failed to fetch reviews');
     }
     const reviews = await response.json();
+    reviewsLoadError = false;
+    errorWrapper.classList.add('hidden');
+
     renderReviewList(reviews);
     initSwiper();
   } catch (error) {
     console.error('Error:', error);
+    reviewsLoadError = true;
   }
 }
 
@@ -26,65 +39,42 @@ function renderReviewList(reviews) {
   const markup = reviews
     .map(review => {
       return `<li class="reviews-items swiper-slide">
-            <img class="reviews-photo" src="${
-              review.avatar_url
-            }" alt="reviewers photo" width="48" height="48">
+            <img class="reviews-photo" src="${review.avatar_url}" alt="reviewers photo" width="48" height="48">
             <div class="reviews-card-text">
             <h3 class="reviewer-name">${review.author}</h3>
-            <p class="reviewer-text" data-full="${review.review.replace(
-              /"/g,
-              '&quot;'
-            )}">${review.review}</p>
+            <p class="reviewer-text">${review.review}</p>
            </div>
             </li>`;
     })
     .join('');
   reviwersList.insertAdjacentHTML('beforeend', markup);
-  // addOverlayConditionally();
 }
 
-// // function check hight text
-// function addOverlayConditionally() {
-//   const reviewTexts = document.querySelectorAll('.reviewer-text');
+// Intersection Observer — показує помилку лише коли секція в полі зору
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && reviewsLoadError) {
+        errorWrapper.classList.remove('hidden');
+        leftReviewBtn.classList.add('hidden');
+        rightReviewsBtn.classList.add('hidden');
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
 
-//   reviewTexts.forEach(textEl => {
-//     const fullText = textEl.getAttribute('data-full');
+observer.observe(reviewsSection);
 
-//     const isOverflowing = textEl.scrollHeight > textEl.clientHeight;
-
-//     if (isOverflowing) {
-//       const overlay = document.createElement('div');
-//       overlay.classList.add('overlay-text');
-//       overlay.innerHTML = `<p>${fullText}</p><button class="close-overlay">Close</button>`;
-//       textEl.insertAdjacentElement('afterend', overlay);
-
-//       const parentItem = textEl.closest('.reviews-card-text');
-//       console.log(textEl);
-//       textEl.addEventListener('click', () => {
-//         console.log('Text clicked');
-//         parentItem.classList.add('show-overlay');
-//       });
-
-//       overlay.querySelector('.close-overlay').addEventListener('click', e => {
-//         e.stopPropagation();
-//         parentItem.classList.remove('show-overlay');
-//       });
-//     }
-//   });
-// }
-// Додаємо обробник події на батьківський елемент .reviews-list
-reviwersList.addEventListener('click', event => {
-  // Перевіряємо, чи клік був на елементі .reviewer-text
-  const textEl = event.target.closest('.reviewer-text');
-  if (textEl) {
-    console.log('Text clicked');
-    const parentItem = textEl.closest('.reviews-card-text');
-    parentItem.classList.add('show-overlay');
-  }
+//Reload"
+retryBtn.addEventListener('clck', () => {
+  errorWrapper.classList.add('hidden');
+  reviewsContainer.innerHTML = '';
+  fetchReviews;
 });
 
 function initSwiper() {
-  new Swiper('.swiper', {
+  new Swiper('.reviews-wrapper', {
     modules: [Navigation],
     slidesPerView: 1,
     spaceBetween: 16,
@@ -117,22 +107,26 @@ function initSwiper() {
     const isBeginning = swiperInstance.isBeginning;
     const isEnd = swiperInstance.isEnd;
 
-    if (isBeginning) {
-      leftReviewBtn.classList.add('rev-btn-disabled');
-      leftReviewBtn.setAttribute('tabindex', '-1');
-    } else {
-      leftReviewBtn.classList.remove('rev-btn-disabled');
-      leftReviewBtn.setAttribute('tabindex', '0');
-    }
+    leftReviewBtn.disabled = isBeginning;
+    leftReviewBtn.classList.toggle('rev-btn-disabled', isBeginning);
 
-    if (isEnd) {
-      rightReviewsBtn.classList.add('rev-btn-disabled');
-      rightReviewsBtn.setAttribute('tabindex', '-1');
-    } else {
-      rightReviewsBtn.classList.remove('rev-btn-disabled');
-      rightReviewsBtn.setAttribute('tabindex', '0');
-    }
+    rightReviewsBtn.disabled = isEnd;
+    rightReviewsBtn.classList.toggle('rev-btn-disabled', isEnd);
   }
 }
+reviwersList.addEventListener('click', function (e) {
+  const card = e.target.closest('.reviews-items');
+  if (!card) return;
 
+  const textBlock = card.querySelector('.reviewer-text');
+  if (!textBlock) return;
+
+  // перевірка чи більше 5 рядків
+  const lineHeight = parseFloat(getComputedStyle(textBlock).lineHeight);
+  const lines = textBlock.scrollHeight / lineHeight;
+
+  if (lines > 5) {
+    textBlock.classList.toggle('scrollable');
+  }
+});
 document.addEventListener('DOMContentLoaded', fetchReviews);
