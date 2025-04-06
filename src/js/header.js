@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', () => {
     const menuOverlay = document.querySelector('.js-menu');
     const closeMenuButton = document.querySelector('.js-close-menu');
-    const menuLinks = document.querySelectorAll('.js-link a');
+    const menuLinks = document.querySelectorAll('.js-link ');
 
     // Function to open the menu
     function openMenu() {
