@@ -11,6 +11,7 @@
   justify-content: space-between;
   width: 100%;
   flex-direction: column;
+  position: relative;
 }
 .faq-subtitle {
   font-weight: 600;
@@ -107,23 +108,38 @@
 /* #endregion */
 /* #region adaptive for desktop */
 @media only screen and (min-width: 1440px) {
-  .faq-list {
+  /* .faq-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Дві колонки однакової ширини */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 64px;
-    /* position: relative; */
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+    padding-top: 32px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  
+    position: relative;
+  } */
+  .faq-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    padding: 32px 0;
   }
-  .faq-list-item {
+  /* .faq-list-item {
     margin-bottom: 58px;
     width: 656px;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     padding-bottom: 26px;
     margin: 0;
     padding: 20px 0;
-  }
+  } */
+
+  /* #region Переміщення елементів на інші позиції */
 
   .faq-list-item:nth-child(2) {
-    order: 3; /* Перемістити перший елемент на другу позицію */
+    order: 3;
   }
   .faq-list-item:nth-child(3) {
     order: 4;
@@ -137,47 +153,71 @@
   .faq-list-item:nth-child(6) {
     order: 6;
   }
+  /* #endregion */
   .break {
     display: inline;
   }
   .last-break {
     display: block;
   }
-  .faq-list {
-    border-top: 1px solid rgba(250, 250, 250, 0.2);
-    padding-top: 32px;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    padding-bottom: 26px;
-    position: relative;
-  }
+
   .faq-list-item::after {
     display: none;
   }
+  /* Прибрала псевдоелемент над лішками */
   .faq-list-item::before {
     display: none;
   }
-
+  /* Прибрала псевдоелемент під останнім елементом */
   .faq-list-item:last-child::after {
     display: none;
   }
   .faq-text {
     margin: 0;
   }
+  /* Прибрала бордер під останніми лішками */
   .faq-list-item:nth-child(3),
   .faq-list-item:last-child {
-    border-bottom: none; /* Прибираємо бордер */
+    border-bottom: none;
   }
+  /* вертикальна лінія */
   .faq-list::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%; /* Розташування по центру між колонками */
-    width: 1px; /* Товщина вертикальної лінії */
-    background-color: rgba(250, 250, 250, 0.2); /* Колір лінії */
-    transform: translateX(-50%); /* Центрування лінії */
+    left: 50%;
+    width: 1px;
+    background-color: rgba(250, 250, 250, 0.2);
+    transform: translateX(-50%);
+  }
+  /* Горизонтальні лінії */
+  .faq-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(250, 250, 250, 0.2),
+      rgba(250, 250, 250, 0.2) 1px,
+      transparent 1px,
+      transparent 184px
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+  /* проба */
+
+  /* Відкритий елемент — автоматична висота */
+  .faq-list-item.active .faq-text {
+    max-height: 500px; /* або скільки треба */
   }
 }
+*/
+
 
 /* #endregion */
 /* #region Accordion */
