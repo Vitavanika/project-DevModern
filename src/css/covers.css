@@ -1,8 +1,10 @@
 .covers-container {
   padding: 0;
+  /* overflow: hidden; */
 }
 
 .covers {
+  position: relative;
   height: 508px;
   overflow: hidden;
   background-image: url('../images/mobile/covers/bg-mobile@1x.png'),
@@ -21,20 +23,30 @@
 }
 
 .away:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .track {
-  /* overflow: hidden; */
-  /* display: none; */
-  transform: rotate(16deg) translateY(-220px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(16deg);
+  transform-origin: center;
 }
 
 .away {
   display: flex;
   object-fit: none;
   /* overflow: hidden; */
-  gap: 24px;
+}
+
+.away-swiper-first {
+  display: flex;
+}
+
+.swiper-wrapper {
+  gap: 16px;
+  display: flex;
 }
 
 .carousel-picture img {
@@ -49,12 +61,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .away {
-    gap: 40px;
+  .swiper-wrapper {
+    gap: 24px;
   }
 
   .away:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .carousel-picture img {
@@ -67,9 +79,10 @@
     background-position: right 250px bottom 600px, left 400px top 400px;
   }
 
-  .track {
-    transform: rotate(16deg) translateY(-400px);
-  }
+  /* .track {
+    transform-origin: center;
+    transform: ;
+  } */
 }
 
 @media only screen and (min-width: 1440px) {
@@ -92,9 +105,10 @@
     }
   }
 
-  .track {
-    transform: rotate(16deg) translateY(-380px);
-  }
+  /* .track {
+    transform-origin: center;
+    transform: translateY(-380px) translateX(-700px);
+  } */
 }
 
 .visually-hidden {
