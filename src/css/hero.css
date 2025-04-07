@@ -10,6 +10,7 @@
   }
 }
 
+
 .hero-title {
   width: 343px;
   margin-top: 249px;  /*потім змінити і перенести до хедера */
@@ -115,13 +116,12 @@
     .hero{
       background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
     }
-  }
+  }    
 
   .hero-title {
     width: 1084px;
     margin-bottom: 243px;
   }
-
   .wrap-title {
     padding: 0 178px;
   }
