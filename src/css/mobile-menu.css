@@ -7,11 +7,11 @@
     z-index: 999;
     opacity: 0;
     pointer-events: none;
-    background-image: url(../images/mobile/modal/bg-modal-mobile@1x.png);
+    background-image: url(./images/mobile/modal/bg-modal-mobile@1x.png);
 background-size: cover;
 background-repeat: no-repeat;
 
-    padding: 30vh 152px 52px;
+    padding: 30vh 150px 52px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@ background-repeat: no-repeat;
 }
 @media (min-resolution: 2dppx) {
     .mobmenu {
-        background-image: url(../images/mobile/modal/bg-modal-mobile@2x.png);
+        background-image: url(.git/images/mobile/modal/bg-modal-mobile@2x.png);
     }
 }
 
@@ -56,7 +56,7 @@ white-space: nowrap;
   border: none;
 }
 .mobmenu-list{
-  margin-bottom: 263px;
+  margin-bottom: auto;
 }
 .mobmenu-link{
   font-weight: 500;

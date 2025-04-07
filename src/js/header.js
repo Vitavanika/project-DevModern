@@ -28,34 +28,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-// відкриття та закриття мобільного меню
-document.addEventListener('DOMContentLoaded', () => {
-    const menuOverlay = document.querySelector('.js-menu');
-    const closeMenuButton = document.querySelector('.js-close-menu');
-    const menuLinks = document.querySelectorAll('.js-link ');
-
-    // Function to open the menu
-    function openMenu() {
-        menuOverlay.classList.add('is-open');
-    }
-
-    // Function to close the menu
-    function closeMenu() {
-        menuOverlay.classList.remove('is-open');
-    }
-
-    // Event listener for the close button
-    closeMenuButton.addEventListener('click', closeMenu);
-
-    // Event listener for menu links to close the menu when a link is clicked
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // Example: Add an event listener to open the menu (e.g., a button to open it)
-    const openMenuButton = document.querySelector('.js-open-menu'); // Add a button with this class in your HTML
-    if (openMenuButton) {
-        openMenuButton.addEventListener('click', openMenu);
-    }
-});

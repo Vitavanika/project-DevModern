@@ -1,4 +1,4 @@
-/* стиді для мобілки */
+/* /* стиді для мобілки * */
 .header{
     position: absolute;
     top: 0;
@@ -7,16 +7,19 @@
     z-index: 99;
     background-color: transparent;
  display: flex;
-  flex-direction: column;
-  gap: 64px;
-   padding-left: 16px;  
-}
-.header-container{
-display: flex;
 align-items: start;
 justify-content: space-between;
 flex-direction: row;
 margin-top: 32px;
+gap: 143px;
+}
+.header-container{
+    display: flex;
+align-items: start;
+justify-content: space-between;
+flex-direction: row;
+margin-top: 32px;
+gap: 143px;
 }
 .logo-box{
     display: flex;
@@ -69,6 +72,9 @@ color: #fafafa;
         display: block;
     }
     .menu-link{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
 font-weight: 500;
 font-size: 16px;
 letter-spacing: -0.02em;
