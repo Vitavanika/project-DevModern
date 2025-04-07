@@ -1,13 +1,31 @@
 /* #region Main */
-.about-main {
-    border-radius: 24px;
-    min-height: 500px;
-    margin-bottom: 16px;
-
-    background: #242527;
-    padding: 32px;
+@media screen and (min-width: 1440px) {
+    .about .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
+.about-main {
+    border-radius: 24px;
+    margin-bottom: 16px;
+    background: #242527;
+    padding: 32px 32px 272px;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-main {
+        padding: 64px 64px 436px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .about-main {
+        max-width: 680px;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+}
 
 .about-main-subtitle {
     font-weight: 500;
@@ -16,6 +34,13 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-main-subtitle {
+        font-size: 38px;
+        line-height: 105%;
+    }
 }
 
 .span-red {
@@ -34,16 +59,53 @@
     overflow: hidden;
     border-radius: 24px;
     margin-bottom: 32px;
+    max-width: 343px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-image {
+        margin-bottom: 64px;
+        max-width: 704px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .about-image {
+        max-width: 680px;
+        margin-bottom: 0;
+    }
 }
 
 /* #endregion Image */
 
 /* #region Accordion */
 
-
+@media screen and (min-width: 1440px) {
+    .about-ac {
+        margin-top: 96px;
+    }
+}
 
 ul.about-ac-container {
     margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+    ul.about-ac-container {
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    ul.about-ac-container {
+        margin-bottom: 96px;
+    }
 }
 
 li.ac {
@@ -54,6 +116,13 @@ li.ac {
     padding-bottom: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+    li.ac {
+        padding-top: 8px;
+        padding-bottom: 32px;
+    }
+}
+
 .ac div.ac-trigger {
     display: flex;
     justify-content: space-between;
@@ -61,27 +130,39 @@ li.ac {
     margin-bottom: 12px;    
 }
 
+@media only screen and (min-width: 768px) {
+    .ac div.ac-trigger {
+        margin-bottom: 8px;
+    }
+}
+
 li.ac .ac-trigger::after {
     content: "";
 }
 
 h3.ac-title {
-    font-family: "Inter Tight", sans-serif;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
 }
 
 .ac-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 100px;
-    padding: 9px;
     width: 36px;
     height: 36px;
     background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+    .ac-button {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .ac-icon {
@@ -93,16 +174,26 @@ h3.ac-title {
 }
 
 div.ac-panel {
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
     letter-spacing: -0.02em;
-    color: #fafafa;
+    color: #fafafa;    
+}
+
+@media screen and (min-width: 1440px) {
+    div.ac-panel {
+        padding-left: 696px;
+        padding-right: 68px;
+    }
 }
 
 #ac-panel-0 p:first-of-type {
     margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+    #ac-panel-0 p:first-of-type {
+        margin-bottom: 16px;
+    }
 }
 
 #ac-panel-1,
@@ -126,6 +217,18 @@ div.ac-panel {
     margin: 0;    
 }
 
+@media only screen and (min-width: 768px) {
+    .swiper-container .swiper {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .swiper-container .swiper {
+        max-width: 1200px;
+    }
+}
+
 .swiper-container .swiper-slide {
     width: 130px;
     height: 130px;
@@ -138,15 +241,20 @@ div.ac-panel {
     justify-content: center;
     text-align: center;
 
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
     letter-spacing: -0.02em;
     color: #fafafa;
 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+@media only screen and (min-width: 768px) {
+    .swiper-container .swiper-slide {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 
 .swiper-container .swiper-slide-active {
     border: none;
@@ -163,6 +271,7 @@ div.ac-panel {
     background: transparent;
     border: none;
     font-size: 24px;
+    stroke: #3B3B3B;
 }
 
 
