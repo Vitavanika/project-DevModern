@@ -1,12 +1,12 @@
 /* /* стиді для мобілки * */
 .header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    background-color: transparent;
- display: flex;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 99;
+background-color: transparent;
+display: flex;
 align-items: start;
 justify-content: space-between;
 flex-direction: row;
@@ -48,16 +48,16 @@ margin-right: 8px;
     display: none;
 }
 @media only screen and (min-width: 768px){
-    .mobile-menu{
+.mobile-menu{
         display: none;
     }
-    .burger-btn{
+.burger-btn{
         display: none;
     }
-    .nav{
+.nav{
 display: block;
     }
-    .nav-menu{
+.nav-menu{
 font-weight: 500;
 font-size: 16px;
 letter-spacing: -0.02em;
@@ -65,16 +65,16 @@ text-decoration: underline;
 text-decoration-skip-ink: none;
 color: #fafafa;
     }
-    .menu-list{
+.menu-list{
         display: none;
     }
-    .menu-list.visible{
+.menu-list.visible{
         display: block;
     }
-    .menu-link{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+.menu-link{
+display: flex;
+flex-direction: column;
+gap: 12px;
 font-weight: 500;
 font-size: 16px;
 letter-spacing: -0.02em;
@@ -82,7 +82,7 @@ text-decoration: underline;
 text-decoration-skip-ink: none;
 color: #fafafa;
     }
-    .order-btn{
+.order-btn{
 display: flex;
 align-items: center;
 justify-content: center;

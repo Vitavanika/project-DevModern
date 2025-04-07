@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const subject = "Запит щодо співпраці";
       const body = "Доброго дня! Я хотів би дізнатися більше про...";
 
-      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      window.location.href = mailtoLink;
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.open(gmailLink, '_blank');
     });
   }
 });
+  
+
