@@ -1,9 +1,9 @@
 .hero {
-  /* position: absolute; */
   min-width: 375px;
   padding: 32px 0;
   background: url(../images/mobile/hero/bg-hero-mobile@1x.png)  no-repeat;
 }
+
 @media (min-resolution: 2dppx){
   .hero{
     background: url(../images/mobile/hero/bg-hero-mobile@2x.png) no-repeat;
@@ -22,11 +22,13 @@
   text-transform: uppercase;
   margin-bottom: 212px;
 }
+
 .social-links {
   display: flex;
   align-items: flex-start;
   gap: 4px;
 }
+
 .social-items {
   color: #FAFAFA;
   font-size: 14px;
@@ -50,6 +52,7 @@
   border-color: #FAFAFA;
   outline: none;
 }
+
 .social-items a {
   text-decoration: none;
   color: inherit;
@@ -59,6 +62,7 @@
   text-align: center;
   outline: none;
 }
+
 .style {
   display: flex;
   padding: 8px 8px;
@@ -73,23 +77,26 @@
     padding: 32px 0;
     background: url(../images/tablet/hero/bg-hero-tablet@1x.png) no-repeat;
   }
+
   @media (min-resolution: 2dppx){
     .hero{
       background: url(../images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
     }
   }
- 
+
   .hero-title {
     width: 632px;
     font-size: 90px;
     letter-spacing: -2.7px;
     margin-bottom: 187px;
   }
+
   .social-links {
     display: flex;
     gap: 8px;
     margin-left: auto;
   }
+
   .wrap {
       width: 100%;
       display: flex;
@@ -103,16 +110,19 @@
     max-width: 1440px;
     background: url(../images/desktop/hero/bg-hero-desktop@1x.png) no-repeat;
   }
+  
   @media (min-resolution: 2dppx){
     .hero{
       background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
-    }    
+    }
   }
-  }
+
   .hero-title {
     width: 1084px;
     margin-bottom: 243px;
   }
+
   .wrap-title {
     padding: 0 178px;
   }
+}
