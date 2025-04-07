@@ -1,0 +1,76 @@
+<footer class="work_together " id="work_together">
+    <div class="container">
+        <div class="work__logo">
+
+
+            <picture class="work_picture">
+                <source media="(max-width: 767px)" srcset="
+                                ./images/mobile/work/jefferson-face-mobile@1x.webp 1x,
+                                ./images/mobile/work/jefferson-face-mobile@2x.webp 2x " />
+                <source media="(min-width: 768px) and (max-width: 1279px)" srcset="
+                                ./images/tablet/works/jefferson-face-tablet@1x.webp 1x,
+                                ./images/tablet/works/jefferson-face-tablet@2x.webp 2x
+                              " />
+                <source media="(min-width: 1280px)" srcset="
+                                ./images/tablet/works/jefferson-face-tablet@1x.webp 1x,
+                                ./images/tablet/works/jefferson-face-tablet@2x.webp 2x
+                              " />
+                <img class="work__logo-img" src="./images/mobile/work/jefferson-face-mobile@1x.webp"
+                    alt="Lloyd Jefferson" width="44" height="44" />
+            </picture>
+
+
+            <h2 class="work__title">
+                Let’s <span class="work__title--red">work</span><br />
+                <span class="work__title--white">together</span>
+            </h2>
+        </div>
+
+
+        <form class="work__form" name="form-contact">
+            <div class="input-group">
+                <input type="email" name="email" id="user-email" placeholder="clients@gmail.com" required
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" class="work__input email" />
+                <p class="email-validation-message"></p>
+            </div>
+
+            <input type="text" name="comments" id="user-comments" placeholder="comments" required
+                class="work__input text" />
+            <button class="work__button" type="submit">Send</button>
+        </form>
+
+
+
+
+
+
+        <nav class="work__nav">
+            <ul class="work__contact-list">
+                <li class="work__contact-item">
+                    <a class="work__contact-link" href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+                </li>
+                <li class="work__contact-item">
+                    <a class="work__contact-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="backdrop">
+            <div class="modal">
+                <button class="modal__close" aria-label="Close modal">
+                    <svg class="modal__icon" width="24" height="24">
+                        <use href="../images/icon.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h2 class="modal__title">Thank you for your interest in cooperation!</h2>
+                <p class="modal__text">
+                    The manager will contact you shortly to discuss further details and
+                    opportunities for cooperation. Please stay in touch.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</footer>
