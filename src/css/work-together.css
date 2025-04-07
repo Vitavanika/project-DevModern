@@ -1,4 +1,8 @@
 /* === Base styles === */
+
+.container {
+    margin: 64px auto;
+}
 .work__logo {
     display: flex;
     align-items: flex-start;
@@ -34,6 +38,8 @@
 }
 
 .work__form {
+
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -48,12 +54,14 @@
     pointer-events: none;
 }
 
+
 .background_lines-img {
     width: 100%;
     height: auto;
     opacity: 0.05;
     object-fit: cover;
 } */
+
 
 .work__input {
     width: 100%;
@@ -63,19 +71,42 @@
     font-size: 16px;
     color: rgba(250, 250, 250, 0.6);
 
+
     padding-bottom: 20px;
     outline: none;
     transition: border-color 0.3s;
     margin-bottom: 16px;
+
 
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
+
 .work__input:focus {
     border-color: #fafafa;
 }
+
+
+.email-validation-message {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #e74a3b;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    display: block;
+}
+
+
+.email-validation-message.success {
+    color: #3cbc81;
+}
+
+
+.work__nav {}
 
 .email-validation-message {
     font-size: 14px;
@@ -92,10 +123,8 @@
     color: #3cbc81;
 }
 
-.work__nav {
-}
 
-.work_picture {
+/* .work_picture {
     position: relative;
 }
 
@@ -108,7 +137,7 @@
     z-index: -1;
     background: url('../images/mobile/work/glass-effect-work@1x.png') no-repeat center;
     opacity: 0.05;
-}
+} */
 
 .work__button {
     width: 100px;
@@ -140,12 +169,21 @@
     text-align: center;
 }
 
+.work__contact-item .tel {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+        border-radius: 60px;
+        padding: 10px 12px;
+        width: 118px;
+        height: 37px;
+}
+
 .work__contact-link {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     color: #fafafa;
     text-decoration: none;
+    width: 118px;
 }
 
 /* .work_together {
@@ -227,40 +265,48 @@
         margin-bottom: 20px;
     }
 
+
     .work__title {
         font-size: 64px;
         margin-bottom: 10px;
     }
+
 
     .work__title--white {
         margin-left: -80px;
         margin-top: 7px;
     }
 
+
     .work__form {
         flex-direction: row;
         align-items: center;
     }
+
 
     .work__input {
         width: 245px;
         margin-right: 32px;
     }
 
+
     .work__button {
         width: 150px;
         height: 150px;
     }
+
 
     .work__contact-list {
         flex-direction: row;
         gap: 8px;
     }
 
+
     .modal {
         width: 492px;
         padding: 64px;
     }
+
 
     .modal__title,
     .modal__text {
@@ -274,4 +320,9 @@
     .work__input {
         width: 390px;
     }
+
+    .container {
+        padding: 0 196px;
+    }
+
 }
