@@ -1,7 +1,9 @@
 .reviews-section {
   background: #1c1d20;
 }
-
+.reviews > .swiper {
+  border-radius: 20px;
+}
 .reviews-header {
   font-weight: 600;
   font-size: 16px;
@@ -57,44 +59,31 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  /* white-space: wrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-height: 120px; */
   display: -webkit-box;
   -webkit-line-clamp: 5; /* кількість рядків*/
-  line-clamp: 5; /* кількість рядків future standart*/
+  line-clamp: 5; /*  future standart*/
   -webkit-box-orient: vertical;
   overflow: hidden;
   position: relative;
   z-index: 1;
   cursor: pointer;
 }
-
-.reviews-card-text.show-overlay .overlay-text {
-  display: flex;
+/*reviewer-scrollable*/
+.reviewer-text.scrollable {
+  overflow-y: auto;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  display: block; /* Забирає обмеження в рядках */
+  max-height: 120px; /* Фіксована висота, як у 5 рядків */
+  padding-right: 4px; /* трохи місця для скролбару */
 }
 
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 20, 20, 0.95);
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  z-index: 10;
-
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+.reviewer-text.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+.reviewer-text.scrollable::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 }
 
 .swiper-button-prev,
@@ -116,16 +105,56 @@
   width: 52px;
   height: 52px;
   background-color: transparent;
-}
-.left-rev-btn svg,
-.right-rev-btn svg {
+  cursor: pointer;
+  transition: border-color 0.3s, stroke 0.3s, opacity 0.3s;
   stroke: rgba(250, 250, 250, 1);
   stroke-width: 2px;
 }
 
-.rev-btn-disabled {
+/* Disable button */
+.rev-btn-disabled,
+.left-rev-btn:disabled,
+.right-rev-btn:disabled {
   border-color: rgba(250, 250, 250, 0.2);
-}
-.rev-btn-disabled svg {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
   stroke: rgba(250, 250, 250, 0.2);
+}
+
+/* Error Massege */
+#reviews-error-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reviews-error {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #db5050;
+  margin-bottom: 24px;
+}
+
+.retry-reviews-btn {
+  border-radius: 60px;
+  padding: 18px 50px;
+  background: #ed3b44;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: background-color 0.3s;
+}
+
+.retry-reviews-btn:hover {
+  background: #e0373f;
+}
+
+.hidden {
+  display: none;
 }
