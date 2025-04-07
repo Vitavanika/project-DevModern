@@ -26,28 +26,41 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(16deg);
   transform-origin: center;
+  width: 250%;
 }
 
 .away {
-  /* display: flex; */
+  display: flex;
   object-fit: none;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
+
 .away > div {
   display: flex;
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
 }
 
 .away:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.swiper-wrapper-covers {
-  width: 100%;
+.swiper-wrapper-covers,
+.swiper-wrapper-first {
   display: flex;
   gap: 16px;
-  animation: riwer 20s linear infinite;
+  transition-timing-function: linear;
+  width: auto;
+}
+
+.first-swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+  display: block;
+  /* animation: riwer 10s linear infinite; */
 }
 
 @keyframes riwer {
@@ -89,10 +102,9 @@
     background-position: right 250px bottom 600px, left 400px top 400px;
   }
 
-  /* .track {
-    transform-origin: center;
-    transform: ;
-  } */
+  .track {
+    width: 235%;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -115,10 +127,9 @@
     }
   }
 
-  /* .track {
-    transform-origin: center;
-    transform: translateY(-380px) translateX(-700px);
-  } */
+  .track {
+    width: 125%;
+  }
 }
 
 .visually-hidden {
