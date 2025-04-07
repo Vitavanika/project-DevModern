@@ -49,80 +49,6 @@
     margin-bottom: 32px;
 }
 
-/* .faq {
-    max-width: 343px;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #fafafa33;
-    cursor: pointer;
-    margin-bottom: 32px;     
-}
-
-.question {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-}
-
-.question h3 {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: rgba(250, 250, 250, 0.4);
-}
-
-.answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1.4s ease;
-
-}
-
-.answer p {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-}
-
-.faq.active .answer {
-    max-height: 560px;
-    animation: fade 1s ease-in-out;
-}
-
-.faq.active .faq-icon {
-    transform: rotate(180deg);
-}
-
-.faq-icon {
-    transition: transform 300ms ease-in;
-}
-
-.faq-button {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 100px;
-    padding: 9px;
-    width: 36px;
-    height: 36px;
-    background-color: transparent;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 
 div.about-ac-container {
     margin-bottom: 32px;
@@ -198,7 +124,6 @@ div.swiper {
 }
 
 ul.swiper-wrapper {
-
 }
 
 li.swiper-slide{
@@ -223,18 +148,6 @@ li.swiper-slide{
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes rotate360 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
 li.swiper-slide-active {
     border: none;
     background-color: #ED3B44;
@@ -251,6 +164,17 @@ li.swiper-slide-active {
     border: none;
     font-size: 24px;
 }
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 
