@@ -67,7 +67,7 @@ const observer = new IntersectionObserver(
 observer.observe(reviewsSection);
 
 //Reload"
-retryBtn.addEventListener('clck', () => {
+retryBtn.addEventListener('click', () => {
   errorWrapper.classList.add('hidden');
   reviewsContainer.innerHTML = '';
   fetchReviews;
@@ -83,7 +83,7 @@ function initSwiper() {
       prevEl: '.left-rev-btn',
     },
     grabCursor: true,
-    // autoHeight: true,
+
     breakpoints: {
       768: {
         slidesPerView: 2,
