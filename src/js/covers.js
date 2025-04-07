@@ -3,7 +3,7 @@ import 'swiper/swiper-bundle.css';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.querySelector('.covers');
+    const carouselContainer = document.querySelector('.covers-container');
 
     const swiperForwardProp = {
         autoplay: {
