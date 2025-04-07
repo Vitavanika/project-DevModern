@@ -8,6 +8,9 @@
     padding: 32px;
 }
 
+.about-main-title {
+
+}
 
 .about-main-subtitle {
     font-weight: 500;
@@ -40,6 +43,10 @@
 
 /* #region Accordion */
 
+
+div.about-ac {
+
+}
 ul.about-ac-container {
     margin-bottom: 32px;
 }
@@ -122,6 +129,9 @@ div.swiper {
     max-width: 260px;
     height: auto;
     margin: 0;    
+}
+
+ul.swiper-wrapper {
 }
 
 li.swiper-slide{
