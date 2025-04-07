@@ -3,7 +3,7 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    margin-bottom: 64px;
+    margin-bottom: 63px;
 }
 
 .work__logo-img {
@@ -11,6 +11,7 @@
     width: 40px;
     height: 40px;
     object-fit: cover;
+    margin-bottom: 4px;
 }
 
 .work__title {
@@ -19,6 +20,7 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
+    color: #fafafa;
 }
 
 .work__title--red {
@@ -27,7 +29,8 @@
 
 .work__title--white {
     display: inline-block;
-    margin-left: -52px;
+    margin-left: -48px;
+
 }
 
 .work__form {
@@ -35,8 +38,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
 }
+
+/* .background_lines {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background_lines-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.05;
+    object-fit: cover;
+} */
 
 .work__input {
     width: 100%;
@@ -45,17 +62,52 @@
     background: transparent;
     font-size: 16px;
     color: rgba(250, 250, 250, 0.6);
+
     padding-bottom: 20px;
     outline: none;
     transition: border-color 0.3s;
+    margin-bottom: 16px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .work__input:focus {
     border-color: #fafafa;
 }
 
-.work__nav{
-    padding-bottom: 32px;
+.email-validation-message {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #e74a3b;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    display: block;
+}
+
+.email-validation-message.success {
+    color: #3cbc81;
+}
+
+.work__nav {
+}
+
+.work_picture {
+    position: relative;
+}
+
+.background_lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('../images/mobile/work/glass-effect-work@1x.png') no-repeat center;
+    opacity: 0.05;
 }
 
 .work__button {
@@ -78,21 +130,32 @@
 .work__contact-list {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
 }
 
 .work__contact-item {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
-    padding: 10px 20px;
+    padding: 10px 12px;
     text-align: center;
 }
 
 .work__contact-link {
+    font-weight: 500;
     font-size: 14px;
+    letter-spacing: -0.02em;
     color: #fafafa;
     text-decoration: none;
 }
+
+/* .work_together {
+    padding-top: 32px;
+    width: 100%;
+    position: relative;
+    background-image: image-set(url('./images/mobile/work/glass-effect-work@1x.png') 1x,
+                url('./images/mobile/work/glass-effect-work@2x.png') 2x
+    );
+}  */
 
 /* === Modal === */
 .backdrop {
@@ -121,11 +184,13 @@
     left: 50%;
     width: 343px;
     background-color: #1c1d20;
+    border: 1px solid rgba(250, 250, 250, 0.1);
     border-radius: 20px;
     padding: 64px 32px;
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 
 .modal__close {
     position: absolute;
@@ -144,6 +209,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 16px;
+    color: #fafafa;
 }
 
 .modal__text {
@@ -151,20 +217,24 @@
     color: rgba(250, 250, 250, 0.6);
 }
 
+
 /* === Media === */
 @media (min-width: 768px) {
     .work__logo-img {
         width: 70px;
         height: 70px;
         border-radius: 24px;
+        margin-bottom: 20px;
     }
 
     .work__title {
         font-size: 64px;
+        margin-bottom: 10px;
     }
 
     .work__title--white {
-        margin-left: -90px;
+        margin-left: -80px;
+        margin-top: 7px;
     }
 
     .work__form {
