@@ -1,8 +1,8 @@
 <section id="projects" class="section">
-  <div class="container projects-container swiper-container">
+  <div class="container projects-container">
     <h2 class="projects-header">Projects</h2>
-    <div class="swiper">
-      <ul class="swiper-wrapper">
+    <div class="swiper projects-swiper">
+      <ul class="swiper-wrapper projects-list">
         <!-- slide-1 -->
         <li class="swiper-slide">
           <div class="projects-wrapper">
@@ -60,7 +60,7 @@
           </div>
         </li>
         <!-- slide-2 -->
-        <!-- <li class="swiper-slide">
+        <li class="swiper-slide">
           <div class="projects-wrapper">
             <div class="project-descr-div">
               <ul class="prj-techs-list">
@@ -114,9 +114,9 @@
               </picture>
             </div>
           </div>
-        </li> -->
+        </li>
         <!-- slide-3 -->
-        <!-- <li class="swiper-slide">
+        <li class="swiper-slide">
           <div class="projects-wrapper">
             <div class="project-descr-div">
               <ul class="prj-techs-list">
@@ -170,24 +170,24 @@
               </picture>
             </div>
           </div>
-        </li> -->
+        </li>
       </ul>
     </div>
     <div class="slider-btns-wrapper">
-      <button class="projects-slide-btn swiper-btn-prev" type="button" disabled>
+      <button
+        class="projects-slide-btn swiper-btn-prev prjts-back-btn-js"
+        type="button"
+      >
         <svg class="icon-arrow-left" width="24" height="24">
-          <use href="../images/icon.svg#icon-arrow-left"></use>
+          <use href="./images/icon.svg#icon-arrow-left"></use>
         </svg>
       </button>
-      <button class="projects-slide-btn swiper-btn-next" type="button">
-        <svg
-          class="icon-arrow-right"
-          width="24"
-          height="24"
-          fill="none"
-          stroke="transparent"
-        >
-          <use href="../images/icon.svg#icon-arrow-right"></use>
+      <button
+        class="projects-slide-btn swiper-btn-next prjts-next-btn-js"
+        type="button"
+      >
+        <svg class="icon-arrow-right" width="24" height="24" fill="none">
+          <use href="./images/icon.svg#icon-arrow-right"></use>
         </svg>
       </button>
     </div>
