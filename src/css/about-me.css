@@ -1,30 +1,10 @@
-/* #region Main */
-@media screen and (min-width: 1440px) {
-    .about .container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
+/* Mobile screen */
 
 .about-main {
     border-radius: 24px;
     margin-bottom: 16px;
     background: #242527;
     padding: 32px 32px 272px;
-}
-
-@media only screen and (min-width: 768px) {
-    .about-main {
-        padding: 64px 64px 436px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .about-main {
-        max-width: 680px;
-        margin-right: 16px;
-        margin-bottom: 0;
-    }
 }
 
 .about-main-subtitle {
@@ -36,13 +16,6 @@
     color: #fafafa;
 }
 
-@media only screen and (min-width: 768px) {
-    .about-main-subtitle {
-        font-size: 38px;
-        line-height: 105%;
-    }
-}
-
 .span-red {
     color: #ed3b44;
 }
@@ -50,10 +23,6 @@
 .span-grey {
     color: rgba(250, 250, 250, 0.4);
 }
-
-/* #endregion Main */
-
-/* #region Image */
 
 .about-image {
     overflow: hidden;
@@ -68,44 +37,8 @@
     display: block;
 }
 
-@media only screen and (min-width: 768px) {
-    .about-image {
-        margin-bottom: 64px;
-        max-width: 704px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .about-image {
-        max-width: 680px;
-        margin-bottom: 0;
-    }
-}
-
-/* #endregion Image */
-
-/* #region Accordion */
-
-@media screen and (min-width: 1440px) {
-    .about-ac {
-        margin-top: 96px;
-    }
-}
-
 ul.about-ac-container {
     margin-bottom: 32px;
-}
-
-@media only screen and (min-width: 768px) {
-    ul.about-ac-container {
-        margin-bottom: 64px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    ul.about-ac-container {
-        margin-bottom: 96px;
-    }
 }
 
 li.ac {
@@ -116,24 +49,11 @@ li.ac {
     padding-bottom: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-    li.ac {
-        padding-top: 8px;
-        padding-bottom: 32px;
-    }
-}
-
 .ac div.ac-trigger {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin-bottom: 12px;    
-}
-
-@media only screen and (min-width: 768px) {
-    .ac div.ac-trigger {
-        margin-bottom: 8px;
-    }
+    margin-bottom: 12px;
 }
 
 li.ac .ac-trigger::after {
@@ -158,13 +78,6 @@ h3.ac-title {
     background-color: transparent;
 }
 
-@media only screen and (min-width: 768px) {
-    .ac-button {
-        width: 40px;
-        height: 40px;
-    }
-}
-
 .ac-icon {
     transition: transform 300ms ease-in;
 }
@@ -176,24 +89,11 @@ h3.ac-title {
 div.ac-panel {
     font-weight: 500;
     letter-spacing: -0.02em;
-    color: #fafafa;    
-}
-
-@media screen and (min-width: 1440px) {
-    div.ac-panel {
-        padding-left: 696px;
-        padding-right: 68px;
-    }
+    color: #fafafa;
 }
 
 #ac-panel-0 p:first-of-type {
     margin-bottom: 32px;
-}
-
-@media only screen and (min-width: 768px) {
-    #ac-panel-0 p:first-of-type {
-        margin-bottom: 16px;
-    }
 }
 
 #ac-panel-1,
@@ -203,10 +103,6 @@ div.ac-panel {
     gap: 10px;
 }
 
-/* #endregion Accordion */
-
-/* #region Swiper */
-
 .swiper-container {
     position: relative;
 }
@@ -214,19 +110,7 @@ div.ac-panel {
 .swiper-container .swiper {
     max-width: 260px;
     height: auto;
-    margin: 0;    
-}
-
-@media only screen and (min-width: 768px) {
-    .swiper-container .swiper {
-        max-width: 600px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .swiper-container .swiper {
-        max-width: 1200px;
-    }
+    margin: 0;
 }
 
 .swiper-container .swiper-slide {
@@ -248,14 +132,6 @@ div.ac-panel {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-@media only screen and (min-width: 768px) {
-    .swiper-container .swiper-slide {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-
 .swiper-container .swiper-slide-active {
     border: none;
     background-color: #ED3B44;
@@ -274,7 +150,6 @@ div.ac-panel {
     stroke: #3B3B3B;
 }
 
-
 @keyframes rotate360 {
     from {
         transform: rotate(0deg);
@@ -285,4 +160,83 @@ div.ac-panel {
     }
 }
 
-/* #endregion Swiper */
+/* Tablet screen */
+
+@media only screen and (min-width: 768px) {
+    .about-main {
+        padding: 64px 64px 436px;
+    }
+
+    .about-main-subtitle {
+        font-size: 38px;
+        line-height: 105%;
+    }
+    .about-image {
+        margin-bottom: 64px;
+        max-width: 704px;
+    }
+    ul.about-ac-container {
+        margin-bottom: 64px;
+    }
+    li.ac {
+        padding-top: 8px;
+        padding-bottom: 32px;
+    }
+    .ac div.ac-trigger {
+        margin-bottom: 8px;
+    }
+
+    .ac-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #ac-panel-0 p:first-of-type {
+        margin-bottom: 16px;
+    }
+    .swiper-container .swiper {
+        max-width: 600px;
+    }
+
+    .swiper-container .swiper-slide {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Desktop screen*/
+
+@media screen and (min-width: 1440px) {
+    .about .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-main {
+        max-width: 680px;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    .about-image {
+        max-width: 680px;
+        margin-bottom: 0;
+    }
+
+    .about-ac {
+        margin-top: 96px;
+    }
+
+    ul.about-ac-container {
+        margin-bottom: 96px;
+    }
+
+    div.ac-panel {
+        padding-left: 696px;
+        padding-right: 68px;
+    }
+
+    .swiper-container .swiper {
+        max-width: 1200px;
+    }
+}
