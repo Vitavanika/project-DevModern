@@ -1,67 +1,44 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
-const firstSwiper = new Swiper('.away-swiper-first', {
+
+const swiperCoverSettings = {
+    wrapperClass: 'swiper-wrapper-covers',
+    slideClass: 'swiper-slide-covers',
     autoplay: {
-        delay: 0,
+        delay: 10,
         disableOnInteraction: false,
+        reverseDirection: true,
     },
-    speed: 3000,
+    speed: 4000,
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: 2.85,
+    slidesPerGroup: 'auto',
     freeMode: true,
     freeModeMomentum: false,
-    slidesPerView: 1,
-    slidesPerGroup: 2,
-});
-const secondSwiper = new Swiper('.away-second', {
-    autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-    },
-    speed: 3000,
-    loop: true,
-    slidesPerView: 'auto',
-    freeMode: true,
-    freeModeMomentum: false,
-    slidesPerView: 1,
-    slidesPerGroup: 2,
-});
-const thirdSwiper = new Swiper('.away-third', {
-    swiperWrapperClass: 'swiper-wrapper-first',
-    sviperClass: 'carousel-picture-first',
-    loop: true,
-    autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-    },
-    speed: 500,
+    spaceBetween: 10,
     effect: 'slide',
-    slidesPerView: 1,
-    slidesPerGroup: 2,
-});
-const fourthSwiper = new Swiper('.away-fourth', {
+};
+
+const swiperCoverReverseSettings = {
+    ...swiperCoverSettings,
     autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
+        ...swiperCoverSettings.autoplay,
+        reverseDirection: false,
     },
-    speed: 3000,
-    loop: true,
-    slidesPerView: 'auto',
-    freeMode: true,
-    freeModeMomentum: false,
-    slidesPerView: 1,
-    slidesPerGroup: 2,
-});
-const fifthSwiper = new Swiper('.away-fifth', {
-    autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-    },
-    speed: 3000,
-    loop: true,
-    slidesPerView: 'auto',
-    freeMode: true,
-    freeModeMomentum: false,
-    slidesPerView: 1,
-    slidesPerGroup: 2,
-});
+};
+
+
+const firstCoverSwiper = new Swiper('.cover-swiper-first', { ...swiperCoverSettings, slideClass: 'first-swiper-slide' });
+console.log("🚀 ~ firstSwiper:", firstCoverSwiper)
+
+const secondCoverSwiper = new Swiper('.cover-swiper-second', swiperCoverReverseSettings);
+console.log("🚀 ~ secondSwiper:", secondCoverSwiper)
+
+const thirdCoverSwiper = new Swiper('.cover-swiper-third', { ...swiperCoverSettings, slideClass: 'third-swiper-slide' });
+console.log("🚀 ~ thirdSwiper:", thirdCoverSwiper)
+
+const fourthCoverSwiper = new Swiper('.cover-swiper-fourth', swiperCoverReverseSettings);
+console.log("🚀 ~ fourthSwiper:", fourthCoverSwiper)
+
+const fifthCoverSwiper = new Swiper('.cover-swiper-fifth', swiperCoverSettings);
+console.log("🚀 ~ fifthSwiper:", fifthCoverSwiper)
