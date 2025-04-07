@@ -119,7 +119,7 @@
 
 .projects-slide-btn:disabled {
   stroke: #3b3b3b;
-  cursor: not-allowed;
+  cursor: default;
   border-color: rgba(250, 250, 250, 0.2);
 }
 
