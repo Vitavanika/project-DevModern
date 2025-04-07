@@ -65,6 +65,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     coversObserver.observe(carouselContainer);
 });
-
-const oneWay = document.querySelector('.away');
-
