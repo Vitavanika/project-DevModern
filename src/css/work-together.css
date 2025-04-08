@@ -1,19 +1,16 @@
 .work_together {
     position: relative;
-    /* або інше значення */
     background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
             url(../images/mobile/work/glass-effect-work@2x.png) 2x);
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
-    /* Фіксує фон */
 }
 
 .work_together-background {
     position: fixed;
     top: 0;
     left: 295px;
-    /* Видалено дублювання */
     width: 100%;
     height: 100%;
     z-index: -1;
