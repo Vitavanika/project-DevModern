@@ -65,6 +65,14 @@
     text-decoration-skip-ink: none;
     color: #fafafa;
   }
+
+  .nav-menu:hover,
+  .nav-menu:focus-visible,
+  .menu-link:hover,
+  .menu-link:focus-visible {
+    color: #ed3b44;
+  }
+
   .menu-list {
     display: none;
   }
@@ -101,6 +109,16 @@
     border: none;
     white-space: nowrap;
     white-space: nowrap;
+  }
+
+  .order-btn:hover,
+  .order-btn:focus-visible {
+    background-color: #e0373f;
+  }
+
+  .order-btn:active {
+    background-color: #fafafa;
+    color: #ed3b44;
   }
 }
 @media only screen and (min-width: 1440px) {
