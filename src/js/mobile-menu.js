@@ -26,4 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
       body.style.overflow = ""; // Відновлення скролу
     });
   });
+  const workButton = document.querySelector(".order-btn-mob");
+  workButton.addEventListener("click", () => {
+    menu.classList.remove("is-open");
+    body.style.overflow = "";
+    document.querySelector('#work_together')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 });
