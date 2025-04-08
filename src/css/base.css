@@ -37,3 +37,17 @@ main {
   clip-path: inset(100%);
   overflow: hidden;
 }
+
+a:hover,
+button:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+a:hover {
+  color: #e0373f;
+}
+
+button:hover {
+  background-color: #e0373f;
+}
