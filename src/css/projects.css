@@ -65,6 +65,7 @@
 }
 
 .see-project-btn {
+  display: block;
   margin-top: 32px;
   padding: 13px 32px;
   background-color: #ed3b44;
@@ -72,16 +73,15 @@
   border-radius: 60px;
   width: 141px;
   height: 45px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #fafafa;
 }
 .see-project-btn:hover,
 .see-project-btn:focus {
   background-color: #e0373f;
-}
-.prj-btn-link {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
 }
 
 .projects-img-div {
