@@ -1,8 +1,9 @@
 .work_together {
-    background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
-            url(../images/mobile/work/glass-effect-work@2x.png) 2x);
+    background-image: image-set(url(./images/mobile/work/glass-effect-work@1x.png) 1x,
+            url(./images/mobile/work/glass-effect-work@2x.png) 2x);
     background-repeat: no-repeat;
     background-position: right;
+    background-attachment: fixed;
 }
 
 
@@ -266,8 +267,8 @@ width: 100%;
 @media (min-width: 768px) {
 
     .work_together {
-            background-image: image-set(url(../images/tablet/works/bg-works-tablet@1x.png) 1x,
-                    url(../images/tablet/works/bg-works-tablet@2x.png) 2x);
+            background-image: image-set(url(./images/tablet/works/bg-works-tablet@1x.png) 1x,
+                    url(./images/tablet/works/bg-works-tablet@2x.png) 2x);
             background-repeat: no-repeat;
             background-position: right;
         }
@@ -347,8 +348,8 @@ width: 100%;
 
 @media (min-width: 1440px) {
     .work_together {
-            background-image: image-set(url(../images/desktop/works/bg-works-desktop@1x.png) 1x,
-                    url(../images/desktop/works/bg-works-desktop@2x.png) 2x);
+            background-image: image-set(url(./images/desktop/works/bg-works-desktop@1x.png) 1x,
+                    url(./images/desktop/works/bg-works-desktop@2x.png) 2x);
             background-repeat: no-repeat;
             background-position: right;
         }
