@@ -6,23 +6,15 @@
   width: 100%;
   z-index: 99;
   background-color: transparent;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 0 auto;
-  gap: 143px;
 }
 .header-container {
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 32px;
+  margin: 0 auto;
   gap: 143px;
-  min-height: 320px;
-  max-width: 375px;
-}
+} 
 .logo-box {
   display: flex;
   flex-direction: row;
@@ -58,6 +50,9 @@
   }
   .nav {
     display: block;
+  }
+  .header-container{
+    gap: 151px;
   }
   .nav-menu {
     font-weight: 500;
@@ -101,5 +96,11 @@
     letter-spacing: -0.02em;
     color: #fafafa;
     border: none;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1440px){
+  .header-container{
+    gap:487px;
   }
 }
