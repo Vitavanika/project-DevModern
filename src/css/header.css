@@ -14,8 +14,7 @@
   justify-content: space-between;
   flex-direction: row;
   margin: 0 auto;
-  gap: 143px;
-} 
+}
 .logo-box {
   display: flex;
   flex-direction: row;
@@ -52,10 +51,10 @@
   .nav {
     display: block;
   }
-  .navbar{
+  .navbar {
     width: 70px;
   }
-  .header-container{
+  .header-container {
     gap: 151px;
   }
   .nav-menu {
@@ -104,13 +103,13 @@
     white-space: nowrap;
   }
 }
-@media only screen and (min-width: 1440px){
-  .header-container{
-    gap:487px;
+@media only screen and (min-width: 1440px) {
+  .header-container {
+    gap: 487px;
   }
 }
-@media only screen and (min-width: 1440px){
-  .header-container{
-    gap:487px;
+@media only screen and (min-width: 1440px) {
+  .header-container {
+    gap: 487px;
   }
 }

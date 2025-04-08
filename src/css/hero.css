@@ -1,25 +1,29 @@
 .hero {
-  min-width: 375px;
+  min-width: 320px;
   padding: 32px 0;
-  background: url(../images/mobile/hero/bg-hero-mobile@1x.png)  no-repeat;
+  background: url(../images/mobile/hero/bg-hero-mobile@1x.png) no-repeat;
 }
 
-@media (min-resolution: 2dppx){
-  .hero{
+@media (min-resolution: 2dppx) {
+  .hero {
     background: url(../images/mobile/hero/bg-hero-mobile@2x.png) no-repeat;
+    background-size: 100%;
   }
 }
 
-
 .hero-title {
   width: 343px;
-  margin-top: 249px;  /*потім змінити і перенести до хедера */
+  margin-top: 249px; /*потім змінити і перенести до хедера */
   align-items: center;
   font-weight: 500;
-  font-size: 50px;
+  font-size: clamp(
+    44px,
+    calc(44px + (50 - 44) * ((100vw - 320px) / (375 - 320))),
+    50px
+  );
   line-height: 1;
   letter-spacing: -1.5px;
-  color: #FAFAFA;
+  color: #fafafa;
   text-transform: uppercase;
   margin-bottom: 212px;
 }
@@ -31,7 +35,7 @@
 }
 
 .social-items {
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.28px;
@@ -43,14 +47,14 @@
   min-width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(250, 250, 250, 0.20);
+  border: 1px solid rgba(250, 250, 250, 0.2);
   white-space: nowrap;
   transition: border-color 0.3s ease;
 }
 
 .social-items:hover,
 .social-items:focus-within {
-  border-color: #FAFAFA;
+  border-color: #fafafa;
   outline: none;
 }
 
@@ -68,7 +72,7 @@
   display: flex;
   padding: 8px 8px;
   border-radius: 60px;
-  border: 1px solid rgba(250, 250, 250, 0.20);
+  border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 /* Style tablet */
@@ -79,8 +83,8 @@
     background: url(../images/tablet/hero/bg-hero-tablet@1x.png) no-repeat;
   }
 
-  @media (min-resolution: 2dppx){
-    .hero{
+  @media (min-resolution: 2dppx) {
+    .hero {
       background: url(../images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
     }
   }
@@ -99,10 +103,10 @@
   }
 
   .wrap {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end; /* Вирівнює всі елементи вправо */
-    }
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Вирівнює всі елементи вправо */
+  }
 }
 
 /* Desktop (1440px) */
@@ -111,12 +115,12 @@
     max-width: 1440px;
     background: url(../images/desktop/hero/bg-hero-desktop@1x.png) no-repeat;
   }
-  
-  @media (min-resolution: 2dppx){
-    .hero{
+
+  @media (min-resolution: 2dppx) {
+    .hero {
       background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
     }
-  }    
+  }
 
   .hero-title {
     width: 1084px;
