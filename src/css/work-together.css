@@ -1,28 +1,22 @@
 .work_together {
-<<<<<<< HEAD
-    background-image: image-set(url(./images/mobile/work/glass-effect-work@1x.png) 1x,
-            url(./images/mobile/work/glass-effect-work@2x.png) 2x);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-attachment: fixed;
-=======
+    position: relative;
+    /* або інше значення */
     background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
             url(../images/mobile/work/glass-effect-work@2x.png) 2x);
     background-repeat: no-repeat;
     background-position: right;
->>>>>>> 6044719a79909c9051692d8207101c0417818d46
+    background-attachment: fixed;
+    /* Фіксує фон */
 }
-
 
 .work_together-background {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 295px;
+    /* Видалено дублювання */
     width: 100%;
     height: 100%;
     z-index: -1;
-    left: 295px;
-
 }
 
 .footer-container {
@@ -225,7 +219,7 @@ width: 100%;
 
 .modal {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     width: 343px;
     background-color: #1c1d20;
@@ -274,13 +268,9 @@ width: 100%;
 @media (min-width: 768px) {
 
     .work_together {
-<<<<<<< HEAD
-            background-image: image-set(url(./images/tablet/works/bg-works-tablet@1x.png) 1x,
-                    url(./images/tablet/works/bg-works-tablet@2x.png) 2x);
-=======
+
             background-image: image-set(url(../images/tablet/works/bg-works-tablet@1x.png) 1x,
                     url(../images/tablet/works/bg-works-tablet@2x.png) 2x);
->>>>>>> 6044719a79909c9051692d8207101c0417818d46
             background-repeat: no-repeat;
             background-position: right;
         }
@@ -360,13 +350,9 @@ width: 100%;
 
 @media (min-width: 1440px) {
     .work_together {
-<<<<<<< HEAD
-            background-image: image-set(url(./images/desktop/works/bg-works-desktop@1x.png) 1x,
-                    url(./images/desktop/works/bg-works-desktop@2x.png) 2x);
-=======
+
             background-image: image-set(url(../images/desktop/works/bg-works-desktop@1x.png) 1x,
                     url(../images/desktop/works/bg-works-desktop@2x.png) 2x);
->>>>>>> 6044719a79909c9051692d8207101c0417818d46
             background-repeat: no-repeat;
             background-position: right;
         }
