@@ -1,20 +1,64 @@
-.faq-list-item {
+.accordion-container {
   display: flex;
-  margin-bottom: 40px;
-  position: relative;
-  justify-content: space-between;
-  width: 100%;
   flex-direction: column;
-  position: relative;
+  gap: 40px;
 }
-.faq-subtitle {
+.accordion-item {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding-bottom: 40px;
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: pointer;
+}
+.accordion-header .faq-subtitle {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: #fafafa;
-  margin-bottom: 16px;
+  margin: 0;
+  flex-grow: 1;
   padding-right: 50px;
+}
+.accordion-header .faq-button {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.faq-button {
+  margin-right: 32px;
+  flex-shrink: 0;
+  position: static;
+}
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+}
+.accordion-item.is-active .accordion-content {
+  max-height: 1000px;
+}
+.accordion-item.is-active .icon-arrow-up {
+  transform: rotate(0deg);
+}
+.icon-arrow-up {
+  transition: transform 300ms ease-in;
+  transform: rotate(180deg);
 }
 .faq-text {
   font-weight: 500;
@@ -22,22 +66,9 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  width: 100%;
-  margin-right: 50px;
+  margin-top: 16px;
+  padding-right: 50px;
 }
-.faq-button {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 7px;
-  width: 34px;
-  height: 34px;
-  background: transparent;
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .faq-title {
   font-weight: 600;
   font-size: 16px;
@@ -46,40 +77,16 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 52px;
 }
-.faq-list-item::before {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: rgba(250, 250, 250, 0.2);
-  top: -20px;
-  left: 0;
-}
-
-.faq-list-item:last-child::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: rgba(250, 250, 250, 0.2);
-  bottom: -20px;
-  left: 0;
-}
 .break {
   display: block;
 }
-/* #region adaptive for tablet */
+.last-break {
+  display: block;
+}
+/* Tablet */
 @media only screen and (max-width: 768px) {
-  .faq-list-item {
-    margin-bottom: 56px;
-  }
-  .faq-list-item::before {
-    top: -32px;
-  }
-  .faq-list-item:last-child::after {
-    bottom: -32px;
+  .accordion-container {
+    gap: 56px;
   }
   .faq-title {
     margin-bottom: 64px;
@@ -87,125 +94,37 @@
   .break {
     display: inline;
   }
-  .last-break {
-    display: block;
-  }
-  .faq-button {
+  .accordion-header .faq-button {
     width: 40px;
     height: 40px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
   }
 }
-/* #endregion */
-/* #region adaptive for desktop */
+/* Desktop */
 @media only screen and (min-width: 1440px) {
-  .faq-list {
-    position: relative;
+  .accordion-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    gap: 0;
+    position: relative;
     border-top: 1px solid rgba(250, 250, 250, 0.2);
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    padding: 0;
   }
-  .faq-list-item {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  .accordion-item {
     padding: 32px 0 42px 0;
-    position: relative;
-    margin-bottom: 0;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   }
-  .faq-list-item.active {
-    padding-top: 32px;
-    padding-bottom: 26px;
-  }
-  .faq-list-item.active:nth-child(2) {
-    padding-bottom: 54px;
-  }
-  /* Відступ правої колонки від вертикальної лінії */
-  .faq-list-item:nth-child(4),
-  .faq-list-item:nth-child(5),
-  .faq-list-item:nth-child(6) {
-    padding-left: 32px;
-  }
-  .faq-list-item:nth-child(3) {
-    padding: 32px 0 62px 0;
-  }
-
-  .faq-text {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  .faq-header {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    gap: 20px;
-  }
-  .faq-header.align-start {
-    align-items: flex-start;
-  }
-  .faq-list-item.active .faq-header {
-    margin-bottom: 16px;
-  }
-  .faq-subtitle {
-    margin: 0;
-    flex-grow: 1;
-  }
-
-  .faq-button {
-    margin-right: 32px;
-    flex-shrink: 0;
-    /* align-self: center; */
-    position: static;
-  }
-  /* #region Переміщення елементів на інші позиції */
-
-  .faq-list-item:nth-child(2) {
-    order: 3;
-  }
-  .faq-list-item:nth-child(3) {
-    order: 4;
-  }
-  .faq-list-item:nth-child(4) {
-    order: 2;
-  }
-  .faq-list-item:nth-child(5) {
-    order: 3;
-  }
-  .faq-list-item:nth-child(6) {
-    order: 6;
-  }
-  /* #endregion */
-  .break {
-    display: inline;
-  }
-  .last-break {
-    display: block;
-  }
-
-  /* #region Прибирання зайвих всевдоелементів та бордерів */
-
-  /* Прибрала псевдоелемент над лішками */
-  .faq-list-item::before {
-    display: none;
-  }
-  /* Прибрала псевдоелемент під останнім елементом */
-  .faq-list-item:last-child::after {
-    display: none;
-  }
-
-  /* Прибрала бордер під останніми лішками */
-  .faq-list-item:nth-child(3),
-  .faq-list-item:last-child {
+  .accordion-item:last-child {
     border-bottom: none;
   }
-  /* #endregion */
-  /* #region Вертикальна лінія */
-
-  .faq-list::before {
+  .accordion-item:nth-child(4),
+  .accordion-item:nth-child(6),
+  .accordion-item:nth-child(2) {
+    padding-left: 32px;
+  }
+  .accordion-item:nth-child(7) {
+    padding-bottom: 62px;
+  }
+  .accordion-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -215,34 +134,10 @@
     background-color: rgba(250, 250, 250, 0.2);
     transform: translateX(-50%);
   }
-  /* #endregion */
-
-  /* Відкритий елемент — автоматична висота */
-  .faq-list-item.active .faq-text {
-    max-height: 184px;
+  .break {
+    display: inline;
+  }
+  .last-break {
+    display: block;
   }
 }
-*/
-
-
-/* #endregion */
-/* #region Accordion */
-.faq-text {
-  display: none;
-  transition: all 0.6s ease;
-}
-
-.faq-list-item.active .faq-text {
-  display: block;
-}
-
-.faq-button svg {
-  transform: rotate(0);
-  transition: transform 0.6s ease;
-}
-
-.faq-list-item.active .faq-button svg {
-  transform: rotate(180deg);
-}
-
-/* #endregion */

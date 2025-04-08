@@ -1,11 +1,10 @@
-/* #region Main */
+/* Mobile screen */
+
 .about-main {
     border-radius: 24px;
-    min-height: 500px;
     margin-bottom: 16px;
-
     background: #242527;
-    padding: 32px;
+    padding: 32px 32px 272px;
 }
 
 
@@ -26,20 +25,18 @@
     color: rgba(250, 250, 250, 0.4);
 }
 
-/* #endregion Main */
-
-/* #region Image */
-
 .about-image {
     overflow: hidden;
     border-radius: 24px;
     margin-bottom: 32px;
+    max-width: 343px;
 }
 
-/* #endregion Image */
-
-/* #region Accordion */
-
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 ul.about-ac-container {
@@ -58,7 +55,7 @@ li.ac {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin-bottom: 12px;    
+    margin-bottom: 12px;
 }
 
 li.ac .ac-trigger::after {
@@ -76,9 +73,11 @@ h3.ac-title {
 }
 
 .ac-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 100px;
-    padding: 9px;
     width: 36px;
     height: 36px;
     background-color: transparent;
@@ -93,10 +92,7 @@ h3.ac-title {
 }
 
 div.ac-panel {
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
     letter-spacing: -0.02em;
     color: #fafafa;
 }
@@ -112,10 +108,6 @@ div.ac-panel {
     gap: 10px;
 }
 
-/* #endregion Accordion */
-
-/* #region Swiper */
-
 .swiper-container {
     position: relative;
 }
@@ -123,7 +115,7 @@ div.ac-panel {
 .swiper-container .swiper {
     max-width: 260px;
     height: auto;
-    margin: 0;    
+    margin: 0;
 }
 
 .swiper-container .swiper-slide {
@@ -138,10 +130,7 @@ div.ac-panel {
     justify-content: center;
     text-align: center;
 
-    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
     letter-spacing: -0.02em;
     color: #fafafa;
 
@@ -163,6 +152,7 @@ div.ac-panel {
     background: transparent;
     border: none;
     font-size: 24px;
+    stroke: #3B3B3B;
 }
 
 
@@ -176,4 +166,97 @@ div.ac-panel {
     }
 }
 
-/* #endregion Swiper */
+/* Tablet screen */
+
+@media only screen and (min-width: 768px) {
+    .about-main {
+        padding: 64px 64px 436px;
+    }
+
+    .about-main-subtitle {
+        font-size: 38px;
+        line-height: 105%;
+    }
+    .about-image {
+        margin-bottom: 64px;
+        max-width: 704px;
+    }
+    ul.about-ac-container {
+        margin-bottom: 64px;
+    }
+    li.ac {
+        padding-top: 8px;
+        padding-bottom: 32px;
+    }
+    .ac div.ac-trigger {
+        margin-bottom: 8px;
+    }
+
+    .ac-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #ac-panel-0 p:first-of-type {
+        margin-bottom: 16px;
+    }
+    .swiper-container .swiper {
+        max-width: 600px;
+    }
+
+    .swiper-container .swiper-slide {
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .custom-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Desktop screen*/
+
+@media screen and (min-width: 1440px) {
+    .about .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-main {
+        max-width: 680px;
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    .about-image {
+        max-width: 680px;
+        margin-bottom: 0;
+    }
+
+    .about-ac {
+        margin-top: 96px;
+    }
+
+    ul.about-ac-container {
+        margin-bottom: 96px;
+    }
+
+    div.ac-panel {
+        padding-left: 696px;
+        padding-right: 68px;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    .swiper-container .swiper {
+        max-width: 1200px;
+    }
+
+    .custom-next {
+        right: 32px;
+    }
+}
