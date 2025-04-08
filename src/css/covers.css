@@ -1,0 +1,133 @@
+.covers-container {
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.covers {
+  position: relative;
+  height: 508px;
+  overflow: hidden;
+  background-image: url('../images/mobile/covers/bg-mobile@1x.png'),
+    url('../images/mobile/covers/bg-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: left 80px top 150px, right 20px bottom 115px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .covers {
+    background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
+      url('../images/mobile/covers/bg-mobile@2x.png');
+  }
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(16deg);
+  transform-origin: center;
+  width: 250%;
+}
+
+.away {
+  display: flex;
+  object-fit: none;
+  overflow: hidden;
+}
+
+.away > div {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.away:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.swiper-wrapper-covers,
+.swiper-wrapper-first {
+  display: flex;
+  gap: 16px;
+  transition-timing-function: linear;
+  width: auto;
+}
+
+.first-swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+  display: block;
+  /* animation: riwer 10s linear infinite; */
+}
+
+@keyframes riwer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-picture img {
+  width: 283px;
+  height: 163px;
+  max-width: none;
+}
+
+/* .carousel-picture:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+} */
+
+@media only screen and (min-width: 768px) {
+  .swiper-wrapper-covers {
+    gap: 24px;
+  }
+
+  .away:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .carousel-picture img {
+    width: 544px;
+    height: 314px;
+  }
+
+  .covers {
+    height: 960px;
+    background-position: right 250px bottom 600px, left 400px top 400px;
+  }
+
+  .track {
+    width: 235%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .covers {
+    background-image: url('../images/mobile/covers/bg-mobile@1x.png'),
+      url('../images/mobile/covers/bg-mobile@1x.png'),
+      url('../images/mobile/covers/bg-mobile@1x.png');
+    background-repeat: no-repeat;
+
+    background-position: left 180px bottom 500px, right 950px bottom 220px,
+      left 900px top 450px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .covers {
+      background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
+        url('../images/mobile/covers/bg-mobile@2x.png');
+    }
+  }
+
+  .track {
+    width: 125%;
+  }
+}
