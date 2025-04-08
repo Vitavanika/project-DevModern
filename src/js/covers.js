@@ -29,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     speed: 25000,
                     loop: true,
-                    slidesPerView: 3.3,
+                    // loopedSlides: 8,
+                    slidesPerView: 4,
                     slidesPerGroup: 6,
                     freeMode: false,
                     effect: 'slide',
+                    spaceBetween: 24,
                 };
 
                 const swiperReverseProp = {
