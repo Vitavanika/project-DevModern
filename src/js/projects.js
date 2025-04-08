@@ -3,6 +3,7 @@ import 'swiper/css';
 import { Keyboard } from 'swiper/modules';
 import 'swiper/css/keyboard';
 
+const prjtsSwiperBtns = document.querySelector(".slider-btns-wrapper");
 const nextPrjBtnEl = document.querySelector(".prjts-next-btn-js");
 const prevPRJBtnEl = document.querySelector(".prjts-back-btn-js");
 
@@ -25,24 +26,26 @@ const swiperOptions = {
 
 const projectsSwiper = new Swiper('.projects-swiper', swiperOptions);
 
-const updatePrjSwiperBtns	 = (event) => {
-   if (projectsSwiper.isBeginning) {
-    prevPRJBtnEl.disabled = true;
-    nextPrjBtnEl.disabled = false; 
-} else if (projectsSwiper.isEnd) {
-    prevPRJBtnEl.disabled = false;
-    nextPrjBtnEl.disabled = true;
-} else{
-    prevPRJBtnEl.disabled = false;
-    nextPrjBtnEl.disabled = false;}
-}
-projectsSwiper.on("slideChange", updatePrjSwiperBtns	);
-
-
-nextPrjBtnEl.addEventListener("click", (event) => {
-    event.preventDefault(); 
+const updatePrjSwiperBtns = (event) => {
+    if (projectsSwiper.isBeginning) {
+        prevPRJBtnEl.disabled = true;
+        nextPrjBtnEl.disabled = false;
+    } else if (projectsSwiper.isEnd) {
+        prevPRJBtnEl.disabled = false;
+        nextPrjBtnEl.disabled = true;
+    } else {
+        prevPRJBtnEl.disabled = false;
+        nextPrjBtnEl.disabled = false;
+    }
+};
+const navigateSlides = (event) => {
+    event.preventDefault();
+    if (event.target.closest(".prjts-next-btn-js")) {
     projectsSwiper.slideNext();
-});
-prevPRJBtnEl.addEventListener("click", (event) => { event.preventDefault();
-    projectsSwiper.slidePrev();});
+    } else if (event.target.closest(".prjts-back-btn-js")) {
+    projectsSwiper.slidePrev();
+    }
+};
 
+prjtsSwiperBtns.addEventListener("click", navigateSlides);
+projectsSwiper.on("slideChange", updatePrjSwiperBtns	);
