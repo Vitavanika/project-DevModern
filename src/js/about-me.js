@@ -17,6 +17,7 @@ const aboutSwiper = new Swiper('.about-swiper', {
   loop: true,
   initialSlide: 0,
   slidesPerView: 2, 
+  grabCursor: true,
   navigation: {
     nextEl: '.custom-next',
   },

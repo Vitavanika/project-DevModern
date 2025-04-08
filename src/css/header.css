@@ -16,6 +16,7 @@
   margin: 0 auto;
   gap: 143px;
 } 
+} 
 .logo-box {
   display: flex;
   flex-direction: row;
@@ -101,6 +102,12 @@
     color: #fafafa;
     border: none;
     white-space: nowrap;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1440px){
+  .header-container{
+    gap:487px;
   }
 }
 @media only screen and (min-width: 1440px){

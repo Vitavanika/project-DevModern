@@ -1,16 +1,16 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
 
-const reviwersList = document.querySelector('.reviews-list');
+const reviewersList = document.querySelector('.reviews-list');
 const leftReviewBtn = document.querySelector('.left-rev-btn');
 const rightReviewsBtn = document.querySelector('.right-rev-btn');
 
 const reviewsSection = document.querySelector('.reviews-section');
 const errorWrapper = document.getElementById('reviews-error-wrapper');
 const retryBtn = document.querySelector('.retry-reviews-btn');
-const reviewsContainer = document.querySelector('.reviews-container');
+const reviewsContainer = document.querySelector('.reviews-wrapper');
 
 // backend request
 let reviewsLoadError = false;
@@ -39,7 +39,7 @@ function renderReviewList(reviews) {
   const markup = reviews
     .map(review => {
       return `<li class="reviews-items swiper-slide">
-            <img class="reviews-photo" src="${review.avatar_url}" alt="reviewers photo" width="48" height="48">
+            <img class="reviews-photo" src="${review.avatar_url}"  alt="${review.author} of photo" width="48" height="48">
             <div class="reviews-card-text">
             <h3 class="reviewer-name">${review.author}</h3>
             <p class="reviewer-text">${review.review}</p>
@@ -47,7 +47,7 @@ function renderReviewList(reviews) {
             </li>`;
     })
     .join('');
-  reviwersList.insertAdjacentHTML('beforeend', markup);
+  reviewersList.insertAdjacentHTML('beforeend', markup);
 }
 
 // Intersection Observer — показує помилку лише коли секція в полі зору
@@ -58,6 +58,7 @@ const observer = new IntersectionObserver(
         errorWrapper.classList.remove('hidden');
         leftReviewBtn.classList.add('hidden');
         rightReviewsBtn.classList.add('hidden');
+        observer.unobserve(reviewsSection);
       }
     });
   },
@@ -66,16 +67,18 @@ const observer = new IntersectionObserver(
 
 observer.observe(reviewsSection);
 
-//Reload"
+//Reload
 retryBtn.addEventListener('click', () => {
   errorWrapper.classList.add('hidden');
   reviewsContainer.innerHTML = '';
-  fetchReviews;
+
+  observer.observe(reviewsSection);
+  fetchReviews();
 });
 
 function initSwiper() {
   new Swiper('.reviews-wrapper', {
-    modules: [Navigation],
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 16,
     navigation: {
@@ -83,6 +86,10 @@ function initSwiper() {
       prevEl: '.left-rev-btn',
     },
     grabCursor: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
 
     breakpoints: {
       768: {
@@ -114,7 +121,7 @@ function initSwiper() {
     rightReviewsBtn.classList.toggle('rev-btn-disabled', isEnd);
   }
 }
-reviwersList.addEventListener('click', function (e) {
+reviewersList.addEventListener('click', function (e) {
   const card = e.target.closest('.reviews-items');
   if (!card) return;
 
