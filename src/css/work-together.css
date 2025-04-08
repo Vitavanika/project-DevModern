@@ -1,5 +1,4 @@
 .work_together {
-    position: relative;
     background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
             url(../images/mobile/work/glass-effect-work@2x.png) 2x);
     background-repeat: no-repeat;
