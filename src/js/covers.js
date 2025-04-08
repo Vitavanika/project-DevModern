@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         disableOnInteraction: false,
                         reverseDirection: false,
                     },
-                    speed: 25000,
+                    speed: 60000,
                     loop: true,
                     // loopedSlides: 8,
                     slidesPerView: 4,
