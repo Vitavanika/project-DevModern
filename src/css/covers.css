@@ -18,10 +18,14 @@
   .covers {
     background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
       url('../images/mobile/covers/bg-mobile@2x.png');
+    background-repeat: no-repeat;
+    background-position: left 120px top 250px, right 100px bottom 250px;
+    background-size: 100%;
   }
 }
 
 .track {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
