@@ -1,6 +1,5 @@
 .covers-container {
   padding: 0;
-  /* overflow: hidden; */
 }
 
 .covers {
@@ -28,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%) rotate(16deg);
   transform-origin: center;
-  width: 250%;
+  width: 1150px;
 }
 
 .away {
@@ -41,7 +40,6 @@
   display: flex;
   position: relative;
   width: 100%;
-  /* overflow: hidden; */
 }
 
 .away:not(:last-child) {
@@ -49,27 +47,24 @@
 }
 
 .swiper-wrapper-covers,
-.swiper-wrapper-first {
+.swiper-wrapper-first,
+.swiper-wrapper-second,
+.swiper-wrapper-third,
+.swiper-wrapper-fourth,
+.swiper-wrapper-fifth {
   display: flex;
-  gap: 16px;
   transition-timing-function: linear;
   width: auto;
 }
 
-.first-swiper-slide {
+.first-swiper-slide,
+.second-swiper-slide,
+.third-swiper-slide,
+.fourth-swiper-slide,
+.fifth-swiper-slide {
   flex-shrink: 0;
   width: auto;
   display: block;
-  /* animation: riwer 10s linear infinite; */
-}
-
-@keyframes riwer {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 .carousel-picture img {
@@ -78,16 +73,7 @@
   max-width: none;
 }
 
-/* .carousel-picture:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-} */
-
 @media only screen and (min-width: 768px) {
-  .swiper-wrapper-covers {
-    gap: 24px;
-  }
-
   .away:not(:last-child) {
     margin-bottom: 24px;
   }
@@ -103,7 +89,7 @@
   }
 
   .track {
-    width: 235%;
+    width: 2200px;
   }
 }
 
@@ -123,11 +109,11 @@
     (min-resolution: 2dppx) {
     .covers {
       background-image: url('../images/mobile/covers/bg-mobile@2x.png'),
+        url('../images/mobile/covers/bg-mobile@2x.png'),
         url('../images/mobile/covers/bg-mobile@2x.png');
+      background-size: 50%;
+      background-position: left 180px bottom 500px, right 950px bottom 220px,
+        left 900px top 450px;
     }
-  }
-
-  .track {
-    width: 125%;
   }
 }
