@@ -84,9 +84,9 @@
 
 /* desktop */
 @media screen and (min-width: 1440px) {
-    .benefits {
-        display: flex;
-        justify-content: center;
+    .container-benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .benefits-card {
@@ -97,7 +97,7 @@
         width: 332px;
     }
 
-    .benefits-title {
-        margin-right: auto;
+    .benefits-btn {
+        margin-top: 32px;
     }
 }
