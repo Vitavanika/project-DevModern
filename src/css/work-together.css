@@ -121,8 +121,14 @@
     padding: 40px 32px;
 }
 
-.work__button:hover {
+.work__button:hover, 
+.work__button:focus-visible {
     background-color: #e0373f;
+}
+
+.work__button:active {
+    background-color: #fafafa;
+    color: #ed3b44;
 }
 
 .work__contact-list {
