@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
 
 const reviewersList = document.querySelector('.reviews-list');
@@ -78,7 +78,7 @@ retryBtn.addEventListener('click', () => {
 
 function initSwiper() {
   new Swiper('.reviews-wrapper', {
-    modules: [Navigation, Keyboard],
+    modules: [Keyboard],
     slidesPerView: 1,
     spaceBetween: 16,
     navigation: {
