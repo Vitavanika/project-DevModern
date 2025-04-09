@@ -58,6 +58,11 @@
   outline: none;
 }
 
+.social-items:active {
+  border-color: #ed3b44;
+  color: #ed3b44;
+}
+
 .social-items a {
   text-decoration: none;
   color: inherit;
