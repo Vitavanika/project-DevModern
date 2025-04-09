@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuTrigger = document.querySelector('.nav-menu'); // Посилання для відкриття меню
     const menuList = document.querySelector('.menu-list'); // Список меню
     const links = document.querySelectorAll('.menu-link'); // Якірні посилання
+    const orderBtn = document.querySelector('.order-btn');
+
+    document.querySelector('.order-btn').addEventListener('click', () => {
+        document.getElementById('work_together').scrollIntoView({ behavior: 'smooth' });
+    });
 
     // Переключення видимості меню
     menuTrigger.addEventListener('click', function (event) {

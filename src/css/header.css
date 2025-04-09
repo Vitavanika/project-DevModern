@@ -129,7 +129,8 @@
     color: #fafafa;
     border: none;
     white-space: nowrap;
-    white-space: nowrap;
+    scroll-behavior: smooth;
+    text-decoration: none;
   }
 
   .order-btn:hover,
