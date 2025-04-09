@@ -4,12 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevModern</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon-main.svg" />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/mobile/hero/bg-hero-mobile@1x.png"
+      type="image/webp"
+      media="(max-width: 767px) and (max-resolution: 1dppx)"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./images/mobile/hero/bg-hero-mobile@2x.png"
+      type="image/webp"
+      media="(max-width: 767px) and (min-resolution: 1.5dppx)"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./images/tablet/hero/bg-hero-tablet@1x.png"
+      type="image/webp"
+      media="(min-width: 768px) and (max-width: 1023px) and (max-resolution: 1dppx)"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./images/tablet/hero/bg-hero-tablet@2x.png"
+      type="image/webp"
+      media="(min-width: 768px) and (max-width: 1023px) and (min-resolution: 1.5dppx)"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./images/desktop/hero/bg-hero-desktop@1x.png"
+      type="image/webp"
+      media="(min-width: 1024px) and (max-resolution: 1dppx)"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./images/desktop/hero/bg-hero-desktop@2x.png"
+      type="image/webp"
+      media="(min-width: 1024px) and (min-resolution: 1.5dppx)"
+    />
+    
+    <link rel="icon" type="image/png" href="./favicon-main.png" />
     <link
       rel="alternate icon"
       type="image/svg+xml"
       href="./favicon-alternate.svg"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -22,7 +71,6 @@
   </head>
   <body>
     <load src="./partials/header.html" />
-    
 
     <main>
       <!-- Loads the specified .html file -->
@@ -36,7 +84,7 @@
     </main>
 
     <load src="./partials/work-together.html" />
-    <load src="./partials/mobile-menu.html"/>
+    <load src="./partials/mobile-menu.html" />
     <script type="module" src="./main.js"></script>
   </body>
 </html>
