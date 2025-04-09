@@ -63,7 +63,10 @@ li.ac .ac-trigger::after {
 }
 
 h3.ac-title {
+    font-family: "Inter Tight", sans-serif;
     font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
@@ -204,6 +207,12 @@ div.ac-panel {
     .swiper-container .swiper-slide {
         width: 200px;
         height: 200px;
+        font-size: 20px;
+    }
+
+    .custom-next-icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -239,7 +248,15 @@ div.ac-panel {
         padding-right: 68px;
     }
 
+    .swiper-container {
+        width: 100%;
+    }
+
     .swiper-container .swiper {
         max-width: 1200px;
+    }
+
+    .custom-next {
+        right: 32px;
     }
 }

@@ -21,10 +21,12 @@ ul {
 a {
   color: currentColor;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 button {
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 img {
