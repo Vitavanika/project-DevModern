@@ -149,10 +149,15 @@
   transition: background-color 0.3s;
 }
 
-.retry-reviews-btn:hover {
+.retry-reviews-btn:hover,
+.retry-reviews-btn:focus-visible {
   background: #e0373f;
 }
 
+.retry-reviews-btn:active {
+  background: #fafafa;
+  color: #ed3b44;
+}
 .hidden {
   display: none;
 }
