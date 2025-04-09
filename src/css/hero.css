@@ -91,7 +91,7 @@
   @media (min-resolution: 2dppx) {
     .hero {
       background: url(../images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
-      background-size: 100%;
+      background-size: auto 100%;
     }
   }
 
@@ -125,7 +125,7 @@
   @media (min-resolution: 2dppx) {
     .hero {
       background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
-      background-size: 100%;
+      background-size: auto 100%;
     }
   }
 
