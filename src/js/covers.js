@@ -80,3 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     coversObserver.observe(carouselContainer);
 });
+
+const goToTopButton = document.querySelector('.go-top-button');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        goToTopButton.classList.remove('visually-hidden');
+    } else {
+        goToTopButton.classList.add('visually-hidden');
+    }
+});
+
+goToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});

@@ -76,6 +76,39 @@
   max-width: none;
 }
 
+.go-top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ed3b44;
+  padding: 8px;
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.go-top-button:hover,
+.go-top-button:focus-visible {
+  background-color: #e0373f;
+}
+.go-top-button:active {
+  background-color: #fafafa;
+}
+
+.go-top-icon {
+  fill: #fafafa;
+}
+
+.go-top-icon:active {
+  fill: #e0373f;
+}
+
 @media only screen and (min-width: 768px) {
   .away:not(:last-child) {
     margin-bottom: 24px;
@@ -93,6 +126,18 @@
 
   .track {
     width: 2200px;
+  }
+
+  .go-top-button {
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .go-top-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
