@@ -154,7 +154,7 @@
     padding: 10px 12px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
-    transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .work__contact-link:hover,
@@ -164,6 +164,7 @@
 
 .work__contact-link:active {
     border: 1px solid #ed3b44;
+    color: #ed3b44 ;
 }
 
 .email-validation-message {
