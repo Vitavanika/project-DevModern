@@ -61,7 +61,6 @@
   color: rgba(250, 250, 250, 0.6);
   display: -webkit-box;
   -webkit-line-clamp: 5; /* кількість рядків*/
-  line-clamp: 5; /*  future standart*/
   -webkit-box-orient: vertical;
   overflow: hidden;
   position: relative;
@@ -72,7 +71,6 @@
 .reviewer-text.scrollable {
   overflow-y: auto;
   -webkit-line-clamp: unset;
-  line-clamp: unset;
   display: block; /* Забирає обмеження в рядках */
   max-height: 120px; /* Фіксована висота, як у 5 рядків */
   padding-right: 4px; /* трохи місця для скролбару */
@@ -151,10 +149,15 @@
   transition: background-color 0.3s;
 }
 
-.retry-reviews-btn:hover {
+.retry-reviews-btn:hover,
+.retry-reviews-btn:focus-visible {
   background: #e0373f;
 }
 
+.retry-reviews-btn:active {
+  background: #fafafa;
+  color: #ed3b44;
+}
 .hidden {
   display: none;
 }
