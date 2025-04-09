@@ -1,12 +1,10 @@
 /* Mobile screen */
-
 .about-main {
     border-radius: 24px;
     margin-bottom: 16px;
     background: #242527;
     padding: 32px 32px 272px;
 }
-
 
 .about-main-subtitle {
     font-weight: 500;
@@ -88,7 +86,7 @@ h3.ac-title {
 }
 
 .ac.is-active .ac-icon {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 div.ac-panel {
@@ -153,6 +151,7 @@ div.ac-panel {
     border: none;
     font-size: 24px;
     stroke: #3B3B3B;
+    padding: 0;
 }
 
 
