@@ -103,6 +103,13 @@
 
 .go-top-icon {
   fill: #fafafa;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.go-top-button:active .go-top-icon {
+  background-color: transparent;
+  fill: #e0373f;
 }
 
 .go-top-icon:active {
