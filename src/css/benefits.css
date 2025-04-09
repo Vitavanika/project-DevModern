@@ -68,7 +68,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .benefits-btn:hover,
@@ -78,6 +78,7 @@
 
 .benefits-btn:active {
   border: 1px solid #ed3b44;
+  color: #ed3b44;
 }
 
 /* tablet */
