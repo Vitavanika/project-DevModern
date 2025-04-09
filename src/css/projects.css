@@ -79,7 +79,7 @@
   color: #fafafa;
   transition: background-color 0.3s ease;
 }
-.see-project-btn:active {
+.see-project-btn:hover.see-project-btn:active {
   background-color: #fafafa;
   color: #ed3b44;
   outline: 1px solid #ed3b44;
