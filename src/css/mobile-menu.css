@@ -16,6 +16,7 @@
   align-items: center;
   text-align: center;
   gap: 12px;
+  transition: opacity 0.5s ease-in-out;
 }
 @media (min-resolution: 2dppx) {
   .mobmenu {
