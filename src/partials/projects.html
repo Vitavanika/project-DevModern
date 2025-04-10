@@ -18,7 +18,8 @@
                 Borders: Ideas,<br />
                 Technologies, Innovations
               </p>
-              <a class="button prj-btn-link see-project-btn"
+              <a
+                class="button see-project-btn"
                 href="https://github.com/Vitavanika/project-DevModern"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,24 +29,24 @@
             <div class="projects-img-div">
               <picture class="prj-pic">
                 <source
-                  media="(max-width: 767px)"
+                  media="(min-width: 1440px)"
                   srcset="
-                    ./images/mobile/projects/expand-mobile@1x.webp 1x,
-                    ./images/mobile/projects/expand-mobile@2x.webp 2x
+                    ./images/desktop/projects/expand-desktop@1x.webp 1x,
+                    ./images/desktop/projects/expand-desktop@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 768px) and (max-width: 1279px)"
+                  media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="
                     ./images/tablet/projects/expand-tablet@1x.webp 1x,
                     ./images/tablet/projects/expand-tablet@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 1280px)"
+                  media="(max-width: 767px)"
                   srcset="
-                    ./images/desktop/projects/expand-desktop@1x.webp 1x,
-                    ./images/desktop/projects/expand-desktop@2x.webp 2x
+                    ./images/mobile/projects/expand-mobile@1x.webp 1x,
+                    ./images/mobile/projects/expand-mobile@2x.webp 2x
                   "
                 />
                 <img
@@ -71,7 +72,8 @@
                 Borders: Ideas,<br />
                 Technologies, Innovations
               </p>
-              <a class="button prj-btn-link see-project-btn"
+              <a
+                class="button see-project-btn"
                 href="https://github.com/Vitavanika/project-DevModern"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,24 +83,24 @@
             <div class="projects-img-div">
               <picture class="prj-pic">
                 <source
-                  media="(max-width: 767px)"
+                  media="(min-width: 1440px)"
                   srcset="
-                    ./images/mobile/projects/petlove-mobile@1x.webp 1x,
-                    ./images/mobile/projects/petlove-mobile@2x.webp 2x
+                    ./images/desktop/projects/petlove-desktop@1x.webp 1x,
+                    ./images/desktop/projects/petlove-desktop@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 768px) and (max-width: 1279px)"
+                  media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="
                     ./images/tablet/projects/petlove-tablet@1x.webp 1x,
                     ./images/tablet/projects/petlove-tablet@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 1280px)"
+                  media="(max-width: 767px)"
                   srcset="
-                    ./images/desktop/projects/petlove-desktop@1x.webp 1x,
-                    ./images/desktop/projects/petlove-desktop@2x.webp 2x
+                    ./images/mobile/projects/petlove-mobile@1x.webp 1x,
+                    ./images/mobile/projects/petlove-mobile@2x.webp 2x
                   "
                 />
                 <img
@@ -124,8 +126,8 @@
                 Borders: Ideas,<br />
                 Technologies, Innovations
               </p>
-              <a class="see-project-btn"
-                class="button see-project-btn prj-btn-link"
+              <a
+                class="button see-project-btn"
                 href="https://github.com/Vitavanika/project-DevModern"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -135,24 +137,24 @@
             <div class="projects-img-div">
               <picture class="prj-pic">
                 <source
-                  media="(max-width: 767px)"
+                  media="(min-width: 1440px)"
                   srcset="
-                    ./images/mobile/projects/vocab-mobile@1x.webp 1x,
-                    ./images/mobile/projects/vocab-mobile@2x.webp 2x
+                    ./images/desktop/projects/vocab-desktop@1x.webp 1x,
+                    ./images/desktop/projects/vocab-desktop@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 768px) and (max-width: 1279px)"
+                  media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="
                     ./images/tablet/projects/vocab-tablet@1x.webp 1x,
                     ./images/tablet/projects/vocab-tablet@2x.webp 2x
                   "
                 />
                 <source
-                  media="(min-width: 1280px)"
+                  media="(max-width: 767px)"
                   srcset="
-                    ./images/desktop/projects/vocab-desktop@1x.webp 1x,
-                    ./images/desktop/projects/vocab-desktop@2x.webp 2x
+                    ./images/mobile/projects/vocab-mobile@1x.webp 1x,
+                    ./images/mobile/projects/vocab-mobile@2x.webp 2x
                   "
                 />
                 <img
@@ -166,13 +168,21 @@
       </ul>
     </div>
     <div class="slider-btns-wrapper">
-      <button class="projects-slide-btn prjts-back-btn-js" type="button">
-        <svg class="arrow-left-svg" width="24" height="24" fill="none">
+      <button
+        class="projects-slide-btn prjts-back-btn-js"
+        type="button"
+        aria-label="projects slide back button"
+      >
+        <svg class="arrow-left-svg" width="24" height="24">
           <use href="./images/icon.svg#icon-arrow-left"></use>
         </svg>
       </button>
-      <button class="projects-slide-btn prjts-next-btn-js" type="button">
-        <svg class="arrow-right-svg" width="24" height="24" fill="none">
+      <button
+        class="projects-slide-btn prjts-next-btn-js"
+        type="button"
+        aria-label="projects slide next button"
+      >
+        <svg class="arrow-right-svg" width="24" height="24">
           <use href="./images/icon.svg#icon-arrow-right"></use>
         </svg>
       </button>

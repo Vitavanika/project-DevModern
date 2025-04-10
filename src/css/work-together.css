@@ -1,29 +1,21 @@
-.work_together {
-    background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
-            url(../images/mobile/work/glass-effect-work@2x.png) 2x);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-attachment: fixed;
-}
-
-.work_together-background {
-    position: fixed;
-    top: 0;
-    left: 295px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 
 .footer-container {
-    margin: 64px auto 32px auto;
+    background-image: image-set(url(../images/mobile/work/glass-effect-work@1x.png) 1x,
+                url(../images/mobile/work/glass-effect-work@2x.png) 2x);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
 .work__logo {
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    margin-bottom: 63px;
+    margin-bottom: 64px;
 }
 
 .work__logo-img {
@@ -68,22 +60,21 @@
     color: rgba(250, 250, 250, 0.6);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
     letter-spacing: -0.02em;
     padding-bottom: 20px;
     outline: none;
     transition: border-color 0.3s;
-    margin-bottom: 16px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
+
 .input-group {
     width: 100%;
 }
 
-.work__input:focus, 
+.work__input:focus,
 .work__input:hover {
     border-color: #fafafa;
 }
@@ -111,6 +102,7 @@
 }
 
 .work__button {
+    margin-top: 16px;
     border-radius: 50%;
     font-weight: 500;
     font-size: 16px;
@@ -122,7 +114,7 @@
     padding: 40px 32px;
 }
 
-.work__button:hover, 
+.work__button:hover,
 .work__button:focus-visible {
     background-color: #e0373f;
 }
@@ -164,7 +156,7 @@
 
 .work__contact-link:active {
     border: 1px solid #ed3b44;
-    color: #ed3b44 ;
+    color: #ed3b44;
 }
 
 .email-validation-message {
@@ -211,7 +203,7 @@
 
 .modal {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     width: 343px;
     background-color: #1c1d20;
@@ -249,15 +241,18 @@
 
 /* === Media === */
 @media (min-width: 768px) {
-    .work_together {
-        background-image: image-set(url(../images/tablet/works/bg-works-tablet@1x.png) 1x,
-                url(../images/tablet/works/bg-works-tablet@2x.png) 2x);
-        background-repeat: no-repeat;
-        background-position: right;
+
+    .footer-container{
+            background-image: image-set(url(../images/tablet/works/bg-works-tablet@1x.png) 1x,
+                        url(../images/tablet/works/bg-works-tablet@2x.png) 2x);
+                background-repeat: no-repeat;
+                background-position: right;
+                padding-bottom: 169px;
+                padding-top: 80px;
     }
 
-    .work_together-background {
-        left: 570px;
+    .work__logo{
+        margin-bottom: 18px;
     }
 
     .work__logo-img {
@@ -267,9 +262,6 @@
         margin-bottom: 20px;
     }
 
-    .footer-container {
-        margin-bottom: 169px;
-    }
 
     .work__title {
         font-size: 64px;
@@ -283,7 +275,7 @@
 
     .work__form {
         flex-direction: row;
-        align-items: center;
+        align-items: baseline;
         gap: 32px;
         margin-bottom: 78px;
     }
@@ -294,6 +286,7 @@
 
     .work__button {
         padding: 65px 57px;
+        margin-top: 0;
     }
 
     .work__nav {
@@ -319,19 +312,14 @@
 }
 
 @media (min-width: 1440px) {
-    .work_together {
-        background-image: image-set(url(../images/desktop/works/bg-works-desktop@1x.png) 1x,
-                url(../images/desktop/works/bg-works-desktop@2x.png) 2x);
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-
-    .work_together-background {
-        left: 1050px;
-    }
 
     .footer-container {
         padding-left: 196px;
+        padding-bottom: 169px;
+            background-image: image-set(url(../images/desktop/works/bg-works-desktop@1x.png) 1x,
+                        url(../images/desktop/works/bg-works-desktop@2x.png) 2x);
+                background-repeat: no-repeat;
+                background-position: right;
     }
 
     .work__button {
