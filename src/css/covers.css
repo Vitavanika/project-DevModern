@@ -68,6 +68,15 @@
   flex-shrink: 0;
   width: auto;
   display: block;
+  cursor: grab;
+}
+
+.first-swiper-slide:active,
+.second-swiper-slide:active,
+.third-swiper-slide:active,
+.fourth-swiper-slide:active,
+.fifth-swiper-slide:active {
+  cursor: grabbing;
 }
 
 .carousel-picture img {
