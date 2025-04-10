@@ -188,6 +188,7 @@
   .project-descr-div {
     flex: 1;
     border-radius: 24px 0 0 24px;
+    padding: 64px 45px;
   }
   .projects-descr {
     margin-top: 223px;
