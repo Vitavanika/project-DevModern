@@ -4,35 +4,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const navigationLinks = document.querySelectorAll(".mobmenu-link");
   const body = document.body;
 
-  // Відкриття меню (опціонально, якщо у вас є кнопка для відкриття)
   const openMenuButton = document.querySelector(".js-open-menu");
+
+  function closeMenu() {
+    menu.classList.remove("is-open");
+    body.style.overflow = "";
+    removeListeners();
+  }
+
   if (openMenuButton) {
-    openMenuButton.addEventListener("click", () => {
-      menu.classList.add("is-open");
-      body.style.overflow = "hidden"; // Заблокувати скрол
+    openMenuButton.addEventListener("click", openMenu);
+  }
+
+  closeMenuButton.addEventListener("click", closeMenu);
+
+  function openMenu() {
+    menu.classList.add("is-open");
+    body.style.overflow = "hidden";
+    addListeners();
+  }
+
+  function addListeners() {
+    navigationLinks.forEach(link => {
+      link.addEventListener("click", handleMenuLinkClick);
     });
   }
 
-  // Закриття меню при кліку на кнопку "close menu"
-  closeMenuButton.addEventListener("click", () => {
-    menu.classList.remove("is-open");
-    body.style.overflow = ""; // Відновлення скролу
-  });
-
-  // Закриття меню після кліку на посилання
-  navigationLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("is-open");
-      body.style.overflow = ""; // Відновлення скролу
+  function removeListeners() {
+    navigationLinks.forEach(link => {
+      link.removeEventListener("click", handleMenuLinkClick);
     });
-  });
+  }
+
+  function handleMenuLinkClick(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href")?.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    closeMenu();
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }
+
   const workButton = document.querySelector(".order-btn-mob");
-  workButton.addEventListener("click", () => {
-    menu.classList.remove("is-open");
-    body.style.overflow = "";
-    document.querySelector('#work_together')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+  workButton?.addEventListener("click", () => {
+    closeMenu();
+    document.querySelector("#work_together")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
     });
   });
 });
