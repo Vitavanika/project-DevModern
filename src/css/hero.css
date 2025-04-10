@@ -31,7 +31,7 @@
   position: absolute;
   right: 16px;
   bottom: 32px;
-  width: calc(100vw - 16px);
+  width: calc(100vw - 24px);
 }
 
 .social-links {
