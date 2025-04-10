@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuList = document.querySelector('.menu-list'); // Список меню
     const links = document.querySelectorAll('.menu-link'); // Якірні посилання
 
+    document.querySelector('.order-btn').addEventListener('click', () => {
+        document.getElementById('work_together').scrollIntoView({ behavior: 'smooth' });
+    });
+
     // Переключення видимості меню
     menuTrigger.addEventListener('click', function (event) {
         event.preventDefault(); // Забороняємо перехід за посиланням
