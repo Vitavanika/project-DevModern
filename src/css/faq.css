@@ -25,7 +25,6 @@
   color: #fafafa;
   margin: 0;
   flex-grow: 1;
-  padding-right: 50px;
 }
 .accordion-header .faq-button {
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -40,7 +39,6 @@
   flex-shrink: 0;
 }
 .faq-button {
-  margin-right: 32px;
   flex-shrink: 0;
   position: static;
 }
@@ -65,7 +63,6 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   margin-top: 16px;
-  padding-right: 50px;
 }
 .faq-title {
   font-weight: 600;
@@ -88,6 +85,9 @@
   }
   .accordion-item {
     padding-bottom: 24px;
+  }
+  .faq-text {
+    padding-right: 50px;
   }
   .faq-title {
     margin-bottom: 64px;
@@ -140,5 +140,13 @@
   }
   .last-break {
     display: block;
+  }
+  .faq-text {
+    padding-right: 32px;
+  }
+  #ac-trigger-3,
+  #ac-trigger-5,
+  #ac-trigger-7 {
+      margin-right: 32px;
   }
 }

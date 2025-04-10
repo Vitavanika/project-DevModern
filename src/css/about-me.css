@@ -45,8 +45,9 @@ li.ac {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fafafa33;
-    padding-top: 12px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .ac div.ac-trigger {
@@ -184,7 +185,7 @@ div.ac-panel {
         margin-bottom: 64px;
     }
     li.ac {
-        padding-top: 8px;
+        padding-top: 32px;
         padding-bottom: 32px;
     }
     .ac div.ac-trigger {
