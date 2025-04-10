@@ -101,7 +101,6 @@
   width: 100%;
   height: auto;
   padding: 100px 16px;
-  flex: 1;
 }
 
 .prj-pic {
@@ -196,6 +195,5 @@
   .projects-img-div {
     flex: 1;
     border-radius: 0 24px 24px 0;
-    padding: 120px 32px;
   }
 }
