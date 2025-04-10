@@ -4,6 +4,12 @@
 .reviews > .swiper {
   border-radius: 20px;
 }
+
+@media only screen and (max-width: 375px) {
+  .reviews > .swiper {
+    width: clamp(288px, calc(288px + (100vw - 320px) * 1), 343px);
+  }
+}
 .reviews-header {
   font-weight: 600;
   font-size: 16px;
