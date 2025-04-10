@@ -1,17 +1,17 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
 
 const aboutAccordion = new Accordion(".about-ac-container", {
-  duration: 500,
+  duration: 1000,
   openOnInit: [0],
 });
 
 
-const aboutSwiper = new Swiper('.about-swiper', {
+const aboutSwiper = new Swiper(".about-swiper", {
   spaceBetween: 0,  
   speed: 500,
   loop: true,
@@ -19,7 +19,7 @@ const aboutSwiper = new Swiper('.about-swiper', {
   slidesPerView: 2, 
   grabCursor: true,
   navigation: {
-    nextEl: '.custom-next',
+    nextEl: ".custom-next",
   },
   keyboard: {
     enabled: true,

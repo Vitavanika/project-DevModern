@@ -34,6 +34,16 @@
   gap: 4px;
 }
 
+@media (min-width: 320px) and (max-width: 374.98px) {
+  .hero-title {
+    width: 288px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
 .social-items {
   color: #fafafa;
   font-size: 14px;
