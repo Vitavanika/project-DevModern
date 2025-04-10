@@ -34,6 +34,16 @@
   gap: 4px;
 }
 
+@media (min-width: 320px) and (max-width: 374.98px) {
+  .hero-title {
+    width: 288px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
 .social-items {
   color: #fafafa;
   font-size: 14px;
@@ -91,6 +101,7 @@
   @media (min-resolution: 2dppx) {
     .hero {
       background: url(../images/tablet/hero/bg-hero-tablet@2x.png) no-repeat;
+      background-size: auto 100%;
     }
   }
 
@@ -124,6 +135,7 @@
   @media (min-resolution: 2dppx) {
     .hero {
       background: url(../images/desktop/hero/bg-hero-desktop@2x.png) no-repeat;
+      background-size: auto 100%;
     }
   }
 

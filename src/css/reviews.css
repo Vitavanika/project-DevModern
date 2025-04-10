@@ -25,12 +25,12 @@
   min-height: 302px;
 }
 @media only screen and (min-width: 768px) {
-  .reviews-item {
+  .reviews-items {
     width: calc((100% - 16px) / 2);
   }
 }
 @media only screen and (min-width: 1168px) {
-  .reviews-item {
+  .reviews-items {
     width: calc((100% - 3 * 16px) / 4);
   }
 }
@@ -107,6 +107,22 @@
   transition: border-color 0.3s, stroke 0.3s, opacity 0.3s;
   stroke: rgba(250, 250, 250, 1);
   stroke-width: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .button-wrapper {
+    gap: 20px;
+  }
+  .left-rev-btn,
+  .right-rev-btn {
+    width: 68px;
+    height: 68px;
+    padding: 18px;
+  }
+  .left-rev-btn svg,
+  .right-rev-btn svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* Disable button */
