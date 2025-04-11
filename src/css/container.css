@@ -19,6 +19,7 @@ section:last-child {
   section:not(:first-child) {
     margin-bottom: 32px;
   }
+
   section:last-child {
     margin-bottom: 96px;
   }
