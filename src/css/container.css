@@ -11,6 +11,10 @@
     max-width: 768px;
     padding: 0 32px;
   }
+
+  section:not(:first-child) {
+    margin-bottom: 32px;
+   }
 }
 
 /* Styles for Desktop devices */
@@ -18,4 +22,8 @@
   .container {
     max-width: 1440px;
   }
+
+  section:not(:first-child) {
+    margin-bottom: 64px;
+   }
 }
