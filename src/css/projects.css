@@ -101,7 +101,6 @@
   width: 100%;
   height: auto;
   padding: 100px 16px;
-  flex: 1;
 }
 
 .prj-pic {
@@ -189,6 +188,7 @@
   .project-descr-div {
     flex: 1;
     border-radius: 24px 0 0 24px;
+    padding: 64px 45px;
   }
   .projects-descr {
     margin-top: 223px;
@@ -196,6 +196,5 @@
   .projects-img-div {
     flex: 1;
     border-radius: 0 24px 24px 0;
-    padding: 120px 32px;
   }
 }
