@@ -5,6 +5,10 @@
   padding: 0 16px;
 }
 
+section:last-child {
+  margin-bottom: 64px;
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .container {
@@ -14,7 +18,11 @@
 
   section:not(:first-child) {
     margin-bottom: 32px;
-   }
+  }
+
+  section:last-child {
+    margin-bottom: 96px;
+  }
 }
 
 /* Styles for Desktop devices */
@@ -25,5 +33,9 @@
 
   section:not(:first-child) {
     margin-bottom: 68px;
-   }
+  }
+
+  section:last-child {
+    margin-bottom: 164px;
+  }
 }
