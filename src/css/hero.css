@@ -2,46 +2,44 @@
   min-width: 320px;
   padding: 32px 0;
   background: url(../images/mobile/hero/bg-hero-mobile@1x.png) no-repeat;
+  background-size: auto 100%;
+  background-position: left top;
+  position: relative;
 }
 
 @media (min-resolution: 2dppx) {
   .hero {
     background: url(../images/mobile/hero/bg-hero-mobile@2x.png) no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
+    background-position: left top;
   }
 }
 
 .hero-title {
-  width: 343px;
   margin-top: 249px; /*потім змінити і перенести до хедера */
   align-items: center;
   font-weight: 500;
-  font-size: clamp(
-    44px,
-    calc(44px + (50 - 44) * ((100vw - 320px) / (375 - 320))),
-    50px
-  );
+  font-size: clamp(44px, calc(10.91vw + 8.1px), 50px);
   line-height: 1;
   letter-spacing: -1.5px;
   color: #fafafa;
   text-transform: uppercase;
-  margin-bottom: 212px;
+  margin-bottom: 249px;
+}
+
+.wrap {
+  position: absolute;
+  right: 16px;
+  bottom: 32px;
+  width: calc(100vw - 24px);
 }
 
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: flex-end;
   gap: 4px;
-}
-
-@media (min-width: 320px) and (max-width: 374.98px) {
-  .hero-title {
-    width: 288px;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-  }
 }
 
 .social-items {
@@ -119,9 +117,10 @@
   }
 
   .wrap {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Вирівнює всі елементи вправо */
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    width: calc(100vw - 64px);
   }
 }
 
