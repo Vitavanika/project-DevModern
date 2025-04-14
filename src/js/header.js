@@ -1,34 +1,73 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuTrigger = document.querySelector('.nav-menu'); // Посилання для відкриття меню
-    const menuList = document.querySelector('.menu-list'); // Список меню
-    const links = document.querySelectorAll('.menu-link'); // Якірні посилання
+    const menuTrigger = document.querySelector('.nav-menu');
+    const menuList = document.querySelector('.menu-list');
+    const orderBtn = document.querySelector('.order-btn');
 
-    document.querySelector('.order-btn').addEventListener('click', () => {
+    orderBtn.addEventListener('click', () => {
         document.getElementById('work_together').scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Переключення видимості меню
-    menuTrigger.addEventListener('click', function (event) {
-        event.preventDefault(); // Забороняємо перехід за посиланням
-        menuList.classList.toggle('visible');
-    });
+    let outsideClickListener;
+    let menuLinkListeners = [];
 
-    // Плавний скрол при кліку на якірні посилання
-    links.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1); // Отримуємо ID секції
-            const targetElement = document.getElementById(targetId);
+    function closeMenu() {
+        menuList.classList.remove('visible');
+        removeListeners();
+    }
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    function handleMenuLinkClick(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
-            // Закриваємо меню після кліку
-            menuList.classList.remove('visible');
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        closeMenu();
+    }
+
+    function handleOutsideClick(event) {
+        if (!menuList.contains(event.target) && !menuTrigger.contains(event.target)) {
+            closeMenu();
+        }
+    }
+
+    function addListeners() {
+        const links = document.querySelectorAll('.menu-link');
+        menuLinkListeners = Array.from(links).map(link => {
+            const handler = handleMenuLinkClick.bind(link);
+            link.addEventListener('click', handler);
+            return { link, handler };
         });
+
+        outsideClickListener = handleOutsideClick;
+        document.addEventListener('click', outsideClickListener);
+    }
+
+    function removeListeners() {
+        menuLinkListeners.forEach(({ link, handler }) => {
+            link.removeEventListener('click', handler);
+        });
+        menuLinkListeners = [];
+
+        if (outsideClickListener) {
+            document.removeEventListener('click', outsideClickListener);
+            outsideClickListener = null;
+        }
+    }
+
+    menuTrigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        const isVisible = menuList.classList.toggle('visible');
+
+        if (isVisible) {
+            addListeners();
+        } else {
+            removeListeners();
+        }
     });
 });

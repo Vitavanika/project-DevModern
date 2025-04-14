@@ -1,3 +1,6 @@
+@import '@fontsource/inter-tight/500.css';
+@import '@fontsource/inter-tight/600.css';
+
 :root {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
@@ -37,4 +40,11 @@ main {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  main {
+    gap: 96px;
+  }
 }

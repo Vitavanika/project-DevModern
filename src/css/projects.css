@@ -13,6 +13,12 @@
 .projects-list {
   width: 100%;
 }
+@media only screen and (max-width: 375px) {
+  .projects-container > .swiper {
+    width: clamp(288px, calc(288px + (100vw - 320px) * 1), 343px);
+  }
+}
+
 .projects-swiper {
   border-radius: 24px;
   box-sizing: border-box;
@@ -95,7 +101,6 @@
   width: 100%;
   height: auto;
   padding: 100px 16px;
-  flex: 1;
 }
 
 .prj-pic {
@@ -183,6 +188,7 @@
   .project-descr-div {
     flex: 1;
     border-radius: 24px 0 0 24px;
+    padding: 64px 45px;
   }
   .projects-descr {
     margin-top: 223px;
