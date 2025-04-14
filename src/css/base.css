@@ -1,6 +1,10 @@
 @import '@fontsource/inter-tight/500.css';
 @import '@fontsource/inter-tight/600.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
