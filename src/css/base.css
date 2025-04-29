@@ -23,7 +23,12 @@ body {
   min-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 main {
@@ -45,7 +50,6 @@ main {
   clip-path: inset(100%);
   overflow: hidden;
 }
-
 
 @media only screen and (min-width: 1440px) {
   main {
