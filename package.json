@@ -17,7 +17,7 @@
   "author": "project-group-14",
   "license": "ISC",
   "dependencies": {
-    "@fontsource/inter-tight": "^5.2.5",
+    "@fontsource/inter-tight": "^5.2.6",
     "accordion-js": "^3.4.0",
     "axios": "^1.8.4",
     "izitoast": "^1.4.0",
